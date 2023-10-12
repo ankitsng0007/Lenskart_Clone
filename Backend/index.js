@@ -1,4 +1,6 @@
 const express = require("express");
+const {connection} = require("./Configs/db");
+require("dotenv").config();
 
 
 
@@ -13,6 +15,13 @@ app.get("/",(req,res)=>{
 
 
 
-app.listen(8080,()=>{
-    console.log("Running at port-8080")
+app.listen(process.env.port, async()=>{
+    try{
+        await connection;
+        console.log("Connected to DB");
+    }catch(err){
+        console.log("Trouble in connectiong to db");
+        console.log(err);
+    }
+    console.log(`Running at port-${process.env.port}`)
 })
