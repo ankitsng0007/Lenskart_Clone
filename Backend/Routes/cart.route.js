@@ -26,6 +26,23 @@ cartRouter.post("/", async(req,res)=>{
     }
 });
 
+cartRouter.patch("/:id", async(req,res)=>{
+    const payload = req.body;
+    const id = req.params.id;
+    try{
+        const cart = await cartModel.findByIdAndUpdate({_id : id}, payload);
+        res.send({
+            success:true,
+            msg : "Successfully Updated The Cart Item",
+            carts : cart
+        });
+        await cart.save();
+    }catch(err){
+        console.log({err : err, msg: "Error in Cart Update"});
+        res.send({ success: false, msg : "Error in cart update" , err : err});
+    }
+});
+
 
 
 module.exports = {cartRouter};
