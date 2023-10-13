@@ -1,5 +1,6 @@
 const express = require("express");
 const {connection} = require("./Configs/db");
+const { userRouter } = require("./Routes/user.route");
 require("dotenv").config();
 
 
@@ -13,6 +14,7 @@ app.get("/",(req,res)=>{
     res.send("Wellcome Homepage")
 })
 
+app.use("/user",userRouter);
 
 
 app.listen(process.env.port, async()=>{
