@@ -14,6 +14,18 @@ cartRouter.get("/", async(req,res)=>{
     }
 });
 
+cartRouter.post("/", async(req,res)=>{
+    const payload = req.body;
+    try{
+        const new_cart = new cartModel(payload);
+        await new_cart.save();
+        res.send("New Cart Item Added");
+    }catch(err){
+        console.log(err);
+        res.send({msg : "Something Went Wrong"});
+    }
+});
+
 
 
 module.exports = {cartRouter};
