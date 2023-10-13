@@ -6,7 +6,56 @@ const productRouter = express.Router();
 
 productRouter.use(express.json());
 
-
+productRouter.get("/", (req,res)=>{
+    const query = {};
+    let data = productModel.find();
+    if(req.query.rating){
+        query.rating = req.query.rating;
+    }
+    if(req.query.color){
+        query.color = {$regex: req.query.color};
+    }
+    if(req.query.price){
+        query.price = req.query.price;
+    }
+    if(req.query.mprice){
+        query.mprice = req.query.mprice;
+    }
+    if(req.query.shape){
+        query.shape = req.query.shape;
+    }
+    if(req.query.gender){
+        query.gender = req.query.gender;
+    }
+    if(req.query.style){
+        query.style = req.query.style;
+    }
+    if(req.query.dimension){
+        query.diamension = req.query.diamension;
+    }
+    if(req.query.productType){
+        query.productType = req.query.productType;
+    }
+    if(req.query.userRated){
+        query.userRated = req.query.userRated ;
+    }
+    if(req.query.search){
+        query.name = { $regex: req.query.search, $options:"i"}
+    }
+    if(req.query.productRefLink){
+        query.productRefLink = { $regex: req.query.productRefLink, $options:"i"}
+    }
+    data.find(query, (error, prod)=>{
+        if(error){
+            res.send(error);
+        }else{
+            res.send(prod);
+        }
+    })
+    .sort({price: req.query.sort === "lowtohigh" ? 1 : -1})
+    .skip(parseInt(req.query.page) * 12)
+    .limit(12);
+});
 
 productRouter.get("/:id", async(req,res)=>{
     try{
@@ -75,6 +124,4 @@ productRouter.delete("/:id", async(req,res)=>{
     }
 });
 
-module.product = {
-    productRouter
-}
+module.exports = {productRouter}

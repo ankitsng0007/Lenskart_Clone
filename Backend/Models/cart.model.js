@@ -4,7 +4,7 @@ const cartSchema = mongoose.Schema({
     image_src: String,
     productRefLinc: String,
     rating: Number,
-    colour: String,
+    color: String,
     price : Number,
     mprice: Number,
     name: String,
@@ -19,6 +19,6 @@ const cartSchema = mongoose.Schema({
     id: Number
 });
 
-const productModel = mongoose.model("cart",cartSchema)
+const cartModel = mongoose.model("cart",cartSchema)
 
 module.exports={ cartModel };

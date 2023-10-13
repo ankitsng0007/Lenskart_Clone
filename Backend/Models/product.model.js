@@ -4,7 +4,7 @@ const productSchema = mongoose.Schema({
     image_src: String,
     productRefLinc: String,
     rating: Number,
-    colour: String,
+    color: String,
     price : Number,
     mprice: Number,
     name: String,
