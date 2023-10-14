@@ -8,7 +8,7 @@ productRouter.use(express.json());
 
 productRouter.get("/", (req,res)=>{
     const query = {};
-    let data = productModel.find();
+    let data = productModel.find()
     if(req.query.rating){
         query.rating = req.query.rating;
     }
