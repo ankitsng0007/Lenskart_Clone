@@ -19,6 +19,7 @@ import HomeCard1 from './HomeCard1';
 import HomeCard2 from './HomeCard2';
 import { HomeCard4, HomeCard4a, HomeCard4b } from './HomeCard4';
 import { HomeCard5, HomeCard5a, HomeCard5b } from './HomeCard5';
+import HomeCard6 from './HomeCard6';
 
 
 
@@ -93,6 +94,12 @@ const Home = () => {
     text="Our Brands"
     src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/VC-Banner.jpg"
      />
+    <HomeCard6 type={HomeDetails6} heading="EyeGlasses" />
+    <HomeCard6 type={HomeDetails7} heading="SunGlasses" />
+    <HomeCard4b
+        text=""
+        src="https://static1.lenskart.com/media/desktop/img/Nov22/Updated%20brand%20banner%20jj%20.jpg"
+      />
    </Box>
   );
 }
