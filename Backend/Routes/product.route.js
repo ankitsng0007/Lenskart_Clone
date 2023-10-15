@@ -1,5 +1,5 @@
 const express = require("express");
-const {productModel} = require("../Models/product.model");
+const {productModel} = require("../Models/prod.model");
 
 
 const productRouter = express.Router();
@@ -73,12 +73,12 @@ productRouter.get("/:id", async(req,res)=>{
     }
 });
 
-productRouter.post("/", async(req,res)=>{
-    const payload = req.body;
+productRouter.post("/add", async(req,res)=>{
+    const payload = req.body
     try{
         const newProduct = new productModel(payload)
         await newProduct.save();
-        res.json({newProduct, message:"New Product Successfully Added"});
+        res.send("New Product Successfully Added");
     }catch(err){
         console.log("err : ", err);
         res.send({msg: err});

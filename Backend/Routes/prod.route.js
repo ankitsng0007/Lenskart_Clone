@@ -79,8 +79,8 @@ productRouter.post("/add", async (req, res) => {
     const newProduct = new ProductModel(payload);
     await newProduct.save();
     res
-      .status(201)
-      .json({ newProduct, message: "New Products successfully Added" });
+    .status(201)
+    .json({ newProduct, message: "New Products successfully Added" });
   } catch (err) {
     console.log("err :", err);
     res.status(400).send({ msg: err });

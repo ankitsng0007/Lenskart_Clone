@@ -2,7 +2,7 @@ const express = require("express");
 const {connection} = require("./Configs/db");
 const { userRouter } = require("./Routes/user.route");
 const { cartRouter } = require("./Routes/cart.route");
-const { productRouter } = require("./Routes/prod.route");
+const { productRouter } = require("./Routes/product.route");
 require("dotenv").config();
 const cors = require("cors");
 
@@ -20,7 +20,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",userRouter);
-app.use("/product", productRouter)
+//app.use("/product", productRouter)
 app.use("/cart", cartRouter);
 //app.use("/product", productRouter);
 
