@@ -18,6 +18,7 @@ import HomeCard from './HomeCard';
 import HomeCard1 from './HomeCard1';
 import HomeCard2 from './HomeCard2';
 import { HomeCard4, HomeCard4a, HomeCard4b } from './HomeCard4';
+import { HomeCard5, HomeCard5a, HomeCard5b } from './HomeCard5';
 
 
 
@@ -67,11 +68,23 @@ const Home = () => {
     <br />
     <br />
     <br />
+    <HomeCard5 />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
      <HomeCard4a
     text="Introducing OJOS Wear - Subscribe & Save"
     src="https://static1.lenskart.com/media/desktop/img/May22/ojos-web.jpg"
      />
      <br />
+    <br />
+    <HomeCard5a type={HomeDetails4} heading="CONTACT LENSES & MORE" />
+    <br />
+    <br />
+    <HomeCard5b type={HomeDetails5} heading="BUY IT YOUR WAY" />
+    <br />
     <br />
     <br />
     <br />

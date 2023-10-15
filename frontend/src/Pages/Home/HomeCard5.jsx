@@ -1,6 +1,6 @@
 import { Box, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { ReactPlayer } from "react-player";
+import { ReactPlayer }  from "react-player/youtube";
 
 
 
