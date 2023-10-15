@@ -1,5 +1,6 @@
 import { Box, Grid, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { ReactPlayer } from "react-player";
 
 
 
@@ -103,3 +104,22 @@ export const HomeCard5b = ({ type, heading }) => {
       </Box>
     );
   };
+
+  export const HomeCard5c = ({type, heading }) => {
+    return (
+        <Box>
+            <Box>
+                <Text>
+                    {heading}
+                </Text>
+                <Grid>
+                    {type.map((i) => (
+                        <Box>
+                            <ReactPlayer url={i.img} width="100%" height="300px" />
+                        </Box>
+                    ))}
+                </Grid>
+            </Box>
+        </Box>
+    )
+  }
