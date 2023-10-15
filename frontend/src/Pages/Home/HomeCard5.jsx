@@ -77,3 +77,29 @@ export const HomeCard5a = ({ type, heading }) => {
         </Box>
     );
 };
+
+export const HomeCard5b = ({ type, heading }) => {
+    return (
+      <Box w="95%" m="auto">
+        <Text fontSize="30px" pb="7" fontWeight="500" textAlign="center">
+          {heading}
+        </Text>
+        <Grid
+          templateColumns={{
+            base: "repeat(1,1fr)",
+            md: "repeat(1,1fr)",
+            lg: "repeat(2,1fr)",
+            xl: "repeat(2,1fr)",
+            "2xl": "repeat(2,1fr)"
+          }}
+          gap={6}
+        >
+          {type.map((i) => (
+            <Box key={i}>
+              <Image src={`${i.img}`} alt={i.caption} />
+            </Box>
+          ))}
+        </Grid>
+      </Box>
+    );
+  };
