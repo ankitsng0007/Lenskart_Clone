@@ -22,12 +22,14 @@ import { HomeCard5, HomeCard5a, HomeCard5b, HomeCard5c } from './HomeCard5';
 import HomeCard6 from './HomeCard6';
 import HomeCard7 from './HomeCard7';
 import HomeCard8 from './HomeCard8';
+import Navbar from '../../Components/Navbar/Navbar';
 
 
 
 const Home = () => {
   return (
    <Box>
+    <Navbar />
     <HomeCard type={HomeDetails} />
     <HomeCard1 type={HomeDetails1} />
     <Image src='https://static1.lenskart.com/media/desktop/img/Apr22/Bannerforexport.jpg' alt='img' mt="10"/>
