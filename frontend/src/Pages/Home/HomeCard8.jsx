@@ -4,20 +4,21 @@ import { AddIcon, MinusIcon } from "@chakra-ui/icons"
 
 const HomeCard8 = ({type}) => {
   return (
-    <Box w="100%" bg="#000042" >
+    <Box w="100%" bg="#000042" color="white">
         <Grid 
           templateColumns={{
-            base: "repeat(1,1fr",
-            sm: "repeat(1,1fr)",
-            md: "repeat(2,1fr)",
-            lg: "repeat(3,1fr)"
+            "base": "repeat(1,1fr",
+            "sm": "repeat(1,1fr)",
+            "md": "repeat(2,1fr)",
+            "lg": "repeat(3,1fr)"
           }}
           w={{ lg: "92%", md:"90%", sm:"90%", base:"87%" }}
           m="auto"
           color="whiteAlpha.900"
+          gap="9"
           >
             {type.map((i) => (
-                <Box>
+                <Box key={i} >
                     <Accordion allowMultiple borderColor="#000042" >
                         <AccordionItem>
                             {({isExpanded}) => (
@@ -52,7 +53,12 @@ const HomeCard8 = ({type}) => {
                                     )}
                                   </AccordionButton>  
                                 </h2>
-                                <AccordionPanel>
+                                <AccordionPanel
+                                  pb={4}
+                                  border="1p solid white"
+                                  borderRadius="md"
+                                  borderTopColor="#000042"
+                                >
                                     {i.info}
                                 </AccordionPanel>
                                 </>
