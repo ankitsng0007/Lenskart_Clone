@@ -18,8 +18,10 @@ import HomeCard from './HomeCard';
 import HomeCard1 from './HomeCard1';
 import HomeCard2 from './HomeCard2';
 import { HomeCard4, HomeCard4a, HomeCard4b } from './HomeCard4';
-import { HomeCard5, HomeCard5a, HomeCard5b } from './HomeCard5';
+import { HomeCard5, HomeCard5a, HomeCard5b, HomeCard5c } from './HomeCard5';
 import HomeCard6 from './HomeCard6';
+import HomeCard7 from './HomeCard7';
+import HomeCard8 from './HomeCard8';
 
 
 
@@ -94,41 +96,82 @@ const Home = () => {
     text="Our Brands"
     src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/VC-Banner.jpg"
      />
+     <br />
+    <br />
     <HomeCard6 type={HomeDetails6} heading="EyeGlasses" />
     <HomeCard6 type={HomeDetails7} heading="SunGlasses" />
+    <br />
+    <br />
+    <br />
+    <br />
     <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Nov22/Updated%20brand%20banner%20jj%20.jpg"
       />
+      <br />
+    <br />
     <HomeCard6 type={HomeDetails6} heading="EyeGlasses" />
+    <br />
+    <br />
     <HomeCard6 type={HomeDetails7} heading="SunGlasses" />
+    <br />
+    <br />
     <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-AIR-Banner.jpg"
       />
+    <br />
+    <br />
+    <br />
+    <br />
     <HomeCard6 type={HomeDetails6} heading="EyeGlasses" />
+    <br />
+    <br />
+    <br />
+    <br />
     <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-Readers-Banner.jpg"
       />
+    <br />
+    <br />
     <HomeCard6 type={HomeDetails10} heading="EyeGlasses" />
+    <br />
+    <br />
+    <br />
     <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Nov20/25-Nov/Banner05_Final2ndDec21.jpg"
       />
+      <br />
+    <br />
     <HomeCard6 type={HomeDetails8} heading="With Power Computer BLUE Lenses" />
+    <br />
+    <br />
     <HomeCard6 type={HomeDetails9} heading="With Zero Power Computer Blue Lenses" />
+    <br />
+    <br />
+    <br />
+    <br />
     <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/June22/Our-Brands-Banner.jpg"
       />
+    <br />
+    <br />
     <HomeCard6 type={HomeDetails11} heading="Contact Lenses" />
+    <br />
     <HomeCard6 type={HomeDetails12} heading="Color Contact Lenses" />
+    <br />
+    <br />
     <HomeCard4b
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/whatsapp.png"
       />
-      
+    <br />
+    <br />
+    <HomeCard7 />
+    <HomeCard8 type={HomeDetails15} />
    </Box>
   );
 }
