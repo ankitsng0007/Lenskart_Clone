@@ -100,6 +100,35 @@ const Home = () => {
         text=""
         src="https://static1.lenskart.com/media/desktop/img/Nov22/Updated%20brand%20banner%20jj%20.jpg"
       />
+    <HomeCard6 type={HomeDetails6} heading="EyeGlasses" />
+    <HomeCard6 type={HomeDetails7} heading="SunGlasses" />
+    <HomeCard4b
+        text=""
+        src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-AIR-Banner.jpg"
+      />
+    <HomeCard6 type={HomeDetails6} heading="EyeGlasses" />
+    <HomeCard4b
+        text=""
+        src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/LK-Readers-Banner.jpg"
+      />
+    <HomeCard6 type={HomeDetails10} heading="EyeGlasses" />
+    <HomeCard4b
+        text=""
+        src="https://static1.lenskart.com/media/desktop/img/Nov20/25-Nov/Banner05_Final2ndDec21.jpg"
+      />
+    <HomeCard6 type={HomeDetails8} heading="With Power Computer BLUE Lenses" />
+    <HomeCard6 type={HomeDetails9} heading="With Zero Power Computer Blue Lenses" />
+    <HomeCard4b
+        text=""
+        src="https://static1.lenskart.com/media/desktop/img/June22/Our-Brands-Banner.jpg"
+      />
+    <HomeCard6 type={HomeDetails11} heading="Contact Lenses" />
+    <HomeCard6 type={HomeDetails12} heading="Color Contact Lenses" />
+    <HomeCard4b
+        text=""
+        src="https://static1.lenskart.com/media/desktop/img/Aug21/25-Aug/whatsapp.png"
+      />
+      
    </Box>
   );
 }
