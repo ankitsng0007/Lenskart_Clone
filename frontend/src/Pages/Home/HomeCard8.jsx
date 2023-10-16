@@ -1,11 +1,11 @@
-import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Grid } from '@chakra-ui/react';
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Grid } from '@chakra-ui/react';
 import React from 'react';
 import { AddIcon, MinusIcon } from "@chakra-ui/icons"
 
 const HomeCard8 = ({type}) => {
   return (
     <Box w="100%" bg="#000042" color="white">
-        <Grid 
+        <Flex
           templateColumns={{
             "base": "repeat(1,1fr",
             "sm": "repeat(1,1fr)",
@@ -67,7 +67,7 @@ const HomeCard8 = ({type}) => {
                     </Accordion>
                 </Box>
             ))}
-        </Grid>
+        </Flex>
     </Box>
   );
 }

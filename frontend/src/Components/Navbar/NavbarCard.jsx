@@ -1,6 +1,7 @@
 import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { NavbarDetail1 } from "./NavbarDetail";
+import NavbarCard5 from "./NavbarCard5";
 
 
 export const NavbarCard1 = () =>{
@@ -27,6 +28,7 @@ export const NavbarCard4 = () => {
     return (
         <Box cursor="pointer" bg="#fbf9f7" p={2.5} >
             <Flex gap={4} pl={5} justifyContent="space-between">
+              <NavbarCard5 />  
                 <HStack w="20%" ml="5%" justifyContent="right">
                 <Image
             src="https://static1.lenskart.com/media/desktop/img/May22/3dtryon1.png"
