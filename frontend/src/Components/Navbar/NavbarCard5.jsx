@@ -464,6 +464,167 @@ const NavbarCard5 = () => {
         </MenuList>
       </Menu>
 
+      <Menu>
+        <MenuButton
+          bg="#fbf9f7"
+          fontSize="15px"
+          fontWeight="600"
+          _hover={{
+            borderBottom: "4px solid teal"
+          }}
+        >
+          SUN GLASSES
+        </MenuButton>
+
+        <MenuList
+          color="blackAlpha.900"
+          h="400px"
+          bg="whiteAlpha.800"
+          w="100%"
+          p="5"
+        >
+          <Link to="/products">
+            <Box>
+              <Grid gridTemplateColumns="repeat(6, 1fr)">
+                <Flex direction="column" justifyContent="space-evenly">
+                  <Flex gap="5">
+                    <Avatar
+                      name="Dan Abrahmov"
+                      src="https://static.lenskart.com/media/desktop/img/men_pic.png"
+                      alt="men"
+                      size="md"
+                    />
+                    <Box
+                      _hover={{ textDecoration: "underline" }}
+                      fontSize="md"
+                      fontWeight="bold"
+                    >
+                      Men
+                    </Box>
+                  </Flex>
+
+                  <Flex gap="5" mt="-40%">
+                    <Avatar
+                      name="Kola Tioluwani"
+                      src="https://static.lenskart.com/media/desktop/img/women_pic.png"
+                      alt="women"
+                      size="md"
+                    />
+                    <Box
+                      _hover={{ textDecoration: "underline" }}
+                      fontSize="md"
+                      fontWeight="bold"
+                    >
+                      Women
+                    </Box>
+                  </Flex>
+                </Flex>
+
+                <Flex direction="column" gap="6">
+                  <Box
+                    fontSize="md"
+                    fontWeight="bold"
+                    borderBottom="1px solid black"
+                    p="1"
+                  >
+                    SELECT CATEGORY
+                  </Box>
+                  <Box _hover={{ bg: "blackAlpha.200" }} fontSize="md">
+                    CLASSIC SUNGLASSES
+                    <p>
+                      Starting From ₹ <span>1299</span>
+                    </p>
+                  </Box>
+                  <Box _hover={{ bg: "blackAlpha.200" }} fontSize="md" p="2">
+                    PREMIUM SUNGLASSES
+                    <p>
+                      Starting From ₹ <span>2500</span>
+                    </p>
+                  </Box>
+                </Flex>
+
+                <Flex direction="column" gap="6">
+                  <Box
+                    fontSize="md"
+                    fontWeight="bold"
+                    borderBottom="1px solid black"
+                    p="1"
+                  >
+                    Our Top Picks
+                  </Box>
+                  <Flex direction="column" fontSize="md" gap="2">
+                    <Box _hover={{ fontWeight: "bold" }}>New Arrivals</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Best Seller</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Pilot Style</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Power Sunglasses</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>
+                      Polarized Sunglasses
+                    </Box>
+                  </Flex>
+                </Flex>
+
+                <Flex direction="column" gap="6">
+                  <Box
+                    fontSize="md"
+                    fontWeight="bold"
+                    borderBottom="1px solid black"
+                    p="1"
+                  >
+                    Shape
+                  </Box>
+                  <Flex direction="column" fontSize="md" gap="2">
+                    <Box _hover={{ fontWeight: "bold" }}>Aviator</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Rounders</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Wayfarer</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Rectangle</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Hexagon</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Cat-Eye</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Clubmaster</Box>
+                  </Flex>
+                </Flex>
+
+                <Flex direction="column" gap="6">
+                  <Box
+                    fontSize="md"
+                    fontWeight="bold"
+                    borderBottom="1px solid black"
+                    p="1"
+                  >
+                    Colections
+                  </Box>
+                  <Flex direction="column" fontSize="md" gap="2">
+                    <Box _hover={{ fontWeight: "bold" }}>Glam Slam</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Havana</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Polarized</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>Power Sunglasses</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>
+                      Designer Sunglasses
+                    </Box>
+                  </Flex>
+                </Flex>
+
+                <Flex direction="column" gap="6">
+                  <Box
+                    fontSize="md"
+                    fontWeight="bold"
+                    borderBottom="1px solid black"
+                    p="1"
+                  >
+                    Brand
+                  </Box>
+                  <Flex direction="column" fontSize="md" gap="2">
+                    <Box _hover={{ fontWeight: "bold" }}>Vincent Chase</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>John Jacobs</Box>
+                    <Box _hover={{ fontWeight: "bold" }}>OJOS</Box>
+                  </Flex>
+                </Flex>
+              </Grid>
+            </Box>
+          </Link>
+        </MenuList>
+      </Menu>
+
+
 
     </Flex>
   );
