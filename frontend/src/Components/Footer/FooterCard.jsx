@@ -57,3 +57,7 @@ export const FooterCard2 = () => {
         </Box>
     );
 };
+
+export const FooterCard = () => {
+    
+}
