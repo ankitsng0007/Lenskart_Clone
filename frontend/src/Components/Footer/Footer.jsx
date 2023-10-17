@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Grid} from "@chakra-ui/react";
-import { FooterCard1 } from './FooterCard';
+import { FooterCard1, FooterCard2 } from './FooterCard';
 import { services } from './FooterDetails';
 
 const Footer = () => {
@@ -32,6 +32,7 @@ const Footer = () => {
                   gap="5"
                  >
                    <FooterCard1 type={services} heading="Services" />
+                   <FooterCard1 />
                 </Grid>
             </Box>
         </Grid>

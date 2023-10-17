@@ -1,4 +1,4 @@
-import { Box, Center, Grid, Text } from "@chakra-ui/react"
+import { Box, Center, Grid, Image, Text } from "@chakra-ui/react"
 
 
 
@@ -26,9 +26,18 @@ export const FooterCard1 = ({ type, heading }) =>{
 
 export const FooterCard2 = () => {
     return (
-        <Box>
+        <Box cursor="pointer" textAlign="center" m="auto">
             <Center>
-                <Grid>
+                <Grid 
+                  gap="2"
+                  templateColumns={{
+                    base: "repeat(1,1fr)",
+                    md: "repeat(2,1fr)",
+                    lg: "repeat(2,1fr)",
+                    xl: "repeat(2,1fr)",
+                    "2xl": "repeat(2,1fr)"
+                  }}
+                >
                 <Image
             src="https://static.lenskart.com/media/desktop/img/play-store.svg"
             alt="img"
@@ -39,6 +48,12 @@ export const FooterCard2 = () => {
           />
                 </Grid>
             </Center>
+            <br />
+            <Center>
+                <Text>
+                    Download Lenskart App to buy EyeGlasses, Sunglasses and Contact Lenses
+                </Text>
+            </Center>
         </Box>
-    )
-}
+    );
+};
