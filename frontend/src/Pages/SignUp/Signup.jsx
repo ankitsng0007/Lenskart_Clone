@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Center, Heading, Input, InputGroup, InputLeftAddon, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure} from "@chakra-ui/react";
+import { Box, Button, Center, Heading, Input, InputGroup, InputLeftAddon, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure} from "@chakra-ui/react";
+import {ViewIcon, ViewOffIcon} from "@chakra-ui/icons";
+
 
 const Signup = () => {
 
@@ -207,6 +209,50 @@ const Signup = () => {
                   <Text mt="-2%" ml="2%">
                     {userData.ph_no.length === 10 ? "" : ph}
                   </Text>
+
+                  <Input 
+                    onChange={handleChange}
+                    fontSize="16px"
+                    name='email'
+                    placeholder='Email'
+                    h={"45px"}
+                    focusBorderColor='rgb(206, 206, 223'
+                    borderColor={"rgb(206, 206, 223)"}
+                    m={"8px 0px 18px 0px"}
+                    rounded="2xl"
+                  />
+                  <Text>
+                    {userData.email.includes("@") && userData.email.includes(".com") ? "" : mail}
+                  </Text>
+
+                  <InputGroup mb="15px" >
+                   <Input 
+                     onChange={handleChange}
+                     fontSize="16px"
+                     type={show ? "text" : "password"}
+                     name='password'
+                     placeholder='Password'
+                     h={"45px"}
+                     focusBorderColor='rgb(206, 206, 223)'
+                     borderColor={"rgb(206, 206, 223)"}
+                     m={"8px 0px 8px 0px"}
+                     rounded="2xl"
+                   />
+
+                   <InputRightElement width="6.5rem" size="lg" >
+                     <Button 
+                       size="md"
+                       borderRadius="3xl"
+                       mt="20%"
+                       onClick={() => setShow(!show)}
+                       bg="white"
+                     >
+                        {show ? <ViewOffIcon /> : <ViewIcon />}
+                     </Button>
+                   </InputRightElement>
+                  </InputGroup>
+                  {userData.password.length >= 6 ? "" : pass}
+                  
                 </Box>
             </ModalBody>
         </ModalContent>
