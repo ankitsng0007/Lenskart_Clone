@@ -299,6 +299,40 @@ const Signup = () => {
                     </Box>
                   </HStack>
 
+                  {userData.email.includes("@") &&
+                  userData.email.includes(".com") &&
+                  userData.first_name.length >= 1 &&
+                  userData.last_name.length >= 1 &&
+                  userData.password.length >= 6 &&
+                  userData.ph_no.length === 10 ? (
+                    <Button
+                      isLoading={loading}
+                      onClick={handleRegister}
+                      bgColor={"#11daac"}
+                      width="100%"
+                      borderRadius={"35px/35px"}
+                      h="50px"
+                      _hover={{backgroundColor: "#11daac"}}
+                      fontFamily={"sans-serif"}
+                      fontWeight="300"
+                      fontSize="18px"
+                    >
+                        Create an Account
+                    </Button>
+                  ) : (
+                    <Button
+                      bgColor={"cccccc"}
+                      width="100%"
+                      borderRadius={"35px/35px"}
+                      h="50px"
+                      fontFamily={"sans-serif"}
+                      fontWeight="300"
+                      fontSize="18px"
+                    >
+                        Create an Account
+                    </Button>
+                  )}
+
                   
                 </Box>
             </ModalBody>
