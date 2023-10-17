@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Center, Heading, Input, InputGroup, InputLeftAddon, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure} from "@chakra-ui/react";
+import { Box, Button, Center, Checkbox, HStack, Heading, Image, Input, InputGroup, InputLeftAddon, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure} from "@chakra-ui/react";
 import {ViewIcon, ViewOffIcon} from "@chakra-ui/icons";
 
 
@@ -252,6 +252,53 @@ const Signup = () => {
                    </InputRightElement>
                   </InputGroup>
                   {userData.password.length >= 6 ? "" : pass}
+
+                  <HStack>
+                    <Box
+                     textDecoration={"underline"}
+                     fontFamily={"sans-serif"}
+                     color={"#333368"}
+                     fontSize="14px"
+                    >
+                        Got a Refferal Code?
+                    </Box>
+
+                    <Box fontFamily={"sans-serif"} color={"#333368"}>
+                        (optional)
+                    </Box>
+                  </HStack>
+
+                  <HStack>
+                    <Checkbox
+                      mb={"20px"}
+                      mt="20px"
+                      size="sm"
+                      fontFamily={"sans-serif"}
+                    >
+                        Get Update on Whatsapp
+                    </Checkbox>
+                    <Image
+                  src="https://static.lenskart.com/media/desktop/img/25-July-19/whatsapp.png"
+                  w={"22px"}
+                  h="22px"
+                />
+                  </HStack>
+                  {exit === true ? <Required info="Email Id Already exits" /> : "" }
+
+                  <HStack spacing={"3px"} mb="10px">
+                    <Box 
+                      fontSize={"14px"}
+                      fontFamily={"sans-serif"}
+                      fontWeight="100"
+                      letterSpacing={"-0.4px"}
+                    >
+                        By creating this account, you agree to our
+                    </Box>
+                    <Box>
+                        Privacy Policy
+                    </Box>
+                  </HStack>
+
                   
                 </Box>
             </ModalBody>
