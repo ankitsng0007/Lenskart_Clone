@@ -1,7 +1,10 @@
 import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext } from "react";
 import { NavbarDetail1 } from "./NavbarDetail";
 import NavbarCard5 from "./NavbarCard5";
+import {AuthContext} from "../../ContextApi/AuthContext";
+import {Link, useNavigate} from "react-router-dom"
+import {} from "";
 
 
 export const NavbarCard1 = () =>{
@@ -20,7 +23,29 @@ export const NavbarCard1 = () =>{
     )
 }
 
+export const NavbarCard2 = () => {
+    const { isAuth, setIsAuth, AuthData } = useContext(AuthContext);
+    const navigate = useNavigate();
 
+    return (
+        <Box cursor="pointer">
+            <HStack m="auto" >
+                <Box w="20%">
+                    <Link to="/" >
+                    <Image src="https://i.imgur.com/OHxtfjd.png" alt="logo" w="75%" />
+                    </Link>
+                </Box>
+                <HStack>
+                    <Box>
+                        <HStack>
+                            
+                        </HStack>
+                    </Box>
+                </HStack>
+            </HStack>
+        </Box>
+    )
+}
 
 
 
