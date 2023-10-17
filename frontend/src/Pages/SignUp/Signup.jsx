@@ -80,7 +80,11 @@ const Signup = () => {
         }
     };
 
-    
+    const getData = (body) => {
+        setLoading(true);
+
+        fetch(``)
+    }
   return (
     <div>
       
