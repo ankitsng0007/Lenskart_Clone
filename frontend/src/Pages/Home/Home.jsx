@@ -23,6 +23,7 @@ import HomeCard6 from './HomeCard6';
 import HomeCard7 from './HomeCard7';
 import HomeCard8 from './HomeCard8';
 import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 
 
 
@@ -174,6 +175,7 @@ const Home = () => {
     <br />
     <HomeCard7 />
     <HomeCard8 type={HomeDetails15} />
+    <Footer />
    </Box>
   );
 }
