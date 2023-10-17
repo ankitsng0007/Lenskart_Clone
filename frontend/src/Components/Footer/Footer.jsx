@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Center, Grid} from "@chakra-ui/react";
-import { FooterCard1, FooterCard2 } from './FooterCard';
+import { FooterCard, FooterCard1, FooterCard2 } from './FooterCard';
 import { about, helps, services } from './FooterDetails';
 
 const Footer = () => {
@@ -40,6 +40,8 @@ const Footer = () => {
                 <FooterCard2 />
             </Center>
         </Grid>
+        <hr />
+        <FooterCard />
     </Box>
   );
 }
