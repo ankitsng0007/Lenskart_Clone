@@ -183,10 +183,30 @@ const Signup = () => {
                    borderRadius="xl"
                    mb="14px"
                    >
-                  <InputLeftAddon />
+                  <InputLeftAddon 
+                    children="+91"
+                    h="45px"
+                    fontSize="18px"
+                    rounded="2xl"
+                    bg="whiteAlpha.900"
+                  />
                     
-                    <Input />
+                    <Input 
+                      onChange={handleChange}
+                      type='number'
+                      name='ph_no'
+                      placeholder='Mobile'
+                      w="100%"
+                      h="45px"
+                      fontSize="16px"
+                      focusBorderColor='rgb(206, 206, 223)'
+                      borderColor={"rgb(206, 206, 223)"}
+                      rounded="2xl"
+                    />
                   </InputGroup>
+                  <Text mt="-2%" ml="2%">
+                    {userData.ph_no.length === 10 ? "" : ph}
+                  </Text>
                 </Box>
             </ModalBody>
         </ModalContent>
