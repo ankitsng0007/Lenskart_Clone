@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Center, Heading, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure} from "@chakra-ui/react";
+import { Box, Center, Heading, Input, InputGroup, InputLeftAddon, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, Text, useDisclosure} from "@chakra-ui/react";
 
 const Signup = () => {
 
@@ -175,6 +175,12 @@ const Signup = () => {
                   <Text mt="-2%" ml="2%">
                       {last}
                   </Text>
+
+                  <InputGroup>
+                  <InputLeftAddon />
+                    
+                    <Input />
+                  </InputGroup>
                 </Box>
             </ModalBody>
         </ModalContent>
