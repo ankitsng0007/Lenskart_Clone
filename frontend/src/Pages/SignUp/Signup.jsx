@@ -176,7 +176,13 @@ const Signup = () => {
                       {last}
                   </Text>
 
-                  <InputGroup>
+                  <InputGroup
+                   w="100%"
+                   h="50px"
+                   fontSize="18px"
+                   borderRadius="xl"
+                   mb="14px"
+                   >
                   <InputLeftAddon />
                     
                     <Input />
