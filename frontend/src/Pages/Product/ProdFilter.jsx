@@ -45,7 +45,7 @@ const ProdFilter = ({
                     <RadioGroup onChange={handlechange} value={val} >
                         <Stack direction="column" gap="2">
                             {type.map((ele, i) => (
-                                <Radio value={el.title} key={i}>
+                                <Radio value={ele.title} key={i}>
                                     {ele.title}
                                 </Radio>
                             ))}
