@@ -1,4 +1,4 @@
-import { Box, useDisclosure } from '@chakra-ui/react';
+import { Box, Center, Flex, Heading, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../ContextApi/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -39,14 +39,132 @@ const Login = (props) => {
             setLoading(true);
             setIncorrect(false);
             if(loginData.email !== "" && loginData.password !== ""){
-                const res = await fetch(``)
+                const res = await fetch(`http://localhost:8080/users/login`, {
+                    method: "POST",
+                    body: JSON.stringify(loginData),
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                });
+                let data = await res.json();
+                if(res){
+                    const credential = await fetch(`http://localhost:8080/users`);
+                    let cred = await credential.json();
+                    localStorage.setItem("token", data.token);
+                    res1 = cred.filter((el) => el.email === loginData.email);
+                    setIsAuth(true);
+                    setAuthData(res1);
+                    if(loginData.email.includes(process.env.admin)){
+                        setLoading(false);
+                        setIncorrect(false);
+                        onClose();
+                        navigate("/productlist");
+                    }else{
+                        setLoading(false);
+                        setIncorrect(false);
+                        onClose();
+                    }
+                }else{
+                    setLoading(false);
+                    setIncorrect(true);
+                }
             }
+        }catch(error){
+            setLoading(false);
+            setIncorrect(true);
+            console.log("An error occurred. Please try again later.");
         }
-    }
+    };
+
+    const handleClick = () => {
+        loginData.password = "";
+        setPass(false);
+    };
+
+    const handleSign = () => {
+        setPass(true);
+        if(loginData.password.length > 6){
+            getData(loginData);
+        }
+    };
 
   return (
     <div>
-      
+      <Center onClick={onOpen} fontWeight={"400"} fontSize={"15px"} w="80px" >
+        Sign In
+      </Center>
+
+      <Modal 
+        isOpen={isOpen}
+        onClose={onClose}
+        isCentered
+        size={{xl: "md",lg: "md", md: "md", sm: "md", base:"sm"}}
+      >
+        <ModalOverlay />
+        <ModalContent rounded="3xl">
+            <ModalCloseButton 
+              borderRadius={"50%"}
+              bg="white"
+              m={"10px 10px 0px 0px"}
+            />
+
+            <ModalBody p={"0px 0px"} borderRadius={"15px 15px 15px 15px"}>
+            <Image
+              src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg"
+              alt="pic"
+              borderRadius={"10px 10px 0px 0px "}
+            />
+            <Box m={"34px 45px 50px 45px"}>
+                <Heading 
+                  fontFamily={"Times,serif"}
+                  fontWeight="100"
+                  fontSize={"28px"}
+                  mb="24px"
+                  color={"#333368"}
+                >
+                    Sign In
+                </Heading>
+
+                {pass === false ? (
+                    <Input 
+                      name='email'
+                      placeholder='Email'
+                      h={"50px"}
+                      fontSize="16px"
+                      focusBorderColor="rgb(206, 206, 223)"
+                      borderColor={"rgb(206, 206, 223)"}
+                      onChange={handleChange}
+                      rounded="2xl"
+                    />
+                ) : (
+                    <Box>
+                    <Box fontSize={"17px"} color="#66668e">
+                        Enter password for
+                    </Box>
+
+                    <Flex 
+                      justifyContent={"space-between"}
+                      fontFamily={"sans-serif"}
+                      mb="22px"
+                      color={"#000042"}
+                    >
+                        <Box fontSize="18px" >{loginData.email}</Box>
+                        <Box 
+                          fontSize={"14px"}
+                          textDecoration="underline"
+                          onClick={handleClick}
+                          cursor="pointer"
+                        >
+                            Edit
+                        </Box>
+                    </Flex>
+                    </Box>
+                   )
+                }
+            </Box>
+            </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 }
