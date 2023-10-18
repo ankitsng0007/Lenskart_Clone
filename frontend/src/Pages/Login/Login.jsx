@@ -1,7 +1,8 @@
-import { Box, Center, Flex, Heading, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Center, Flex, Heading, Image, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../ContextApi/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
 const Login = (props) => {
     const [loading, setLoading] = useState(false);
@@ -158,9 +159,58 @@ const Login = (props) => {
                             Edit
                         </Box>
                     </Flex>
+
+                    <InputGroup>
+                      <Input 
+                        type={show ? "text" : "password"}
+                        name='password'
+                        placeholder='Enter password'
+                        h={"50px"}
+                        fontSize="16px"
+                        focusBorderColor='rgb(206, 206, 223)'
+                        borderColor={"rgb(206, 206, 223)"}
+                        onChange={handleChange}
+                        rounded="2xl"
+                      />
+
+                      <InputRightElement width="6.5rem" size="lg">
+                        <Button
+                          size="md"
+                          borderRadius="3xl"
+                          mt="10%"
+                          onClick={()=> setShow(!show)}
+                          bg="white"
+                        >
+                            {show ? <ViewOffIcon /> : <ViewIcon />}
+                        </Button>
+                      </InputRightElement>
+                    </InputGroup>
+
+                    {incorrect === true ? (
+                        <Box
+                          fontSize={"14px"}
+                          m="3px 0px 3px 0px"
+                          color={"#ff1f1f"}
+                          fontWeight="500"
+                          ml="2"
+                          letterSpacing={"-0.4px"}
+                        >
+                            Wrong Email or Password
+                        </Box>
+                    ) : (
+                        ""
+                    )}
                     </Box>
                    )
                 }
+                <Box 
+                  textDecoration={"underline"}
+                  m={"15px 0px 0px 0px"}
+                  color="#000042"
+                  fontSize="15px"
+                >
+                    Forgot Password
+                </Box>
             </Box>
             </ModalBody>
         </ModalContent>
