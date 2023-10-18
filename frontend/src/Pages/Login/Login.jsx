@@ -1,4 +1,4 @@
-import { Box, Button, Center, Flex, Heading, Image, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Center, Checkbox, Flex, HStack, Heading, Image, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../ContextApi/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -211,6 +211,46 @@ const Login = (props) => {
                 >
                     Forgot Password
                 </Box>
+                {loginData.email.includes("@") && loginData.email.includes(".com") ? "" : btn}
+
+                <HStack fontSize="16px">
+                    <Checkbox mb={"20px"} mt={"20px"} size="sm">
+                        Get Update on Whatsapp
+                    </Checkbox>
+                    <Image
+                      src="https://static.lenskart.com/media/desktop/img/25-July-19/whatsapp.png"
+                      w={"22px"}
+                      h="22px"
+                />
+                </HStack>
+                {loginData.email.includes("@") && 
+                loginData.email.includes(".com") ? (
+                    <Button
+                      isLoading={loading}
+                      onClick={handleSign}
+                      bgColor={"#11daac"}
+                      width="100%"
+                      borderRadius={"35px/35px"}
+                      h="50px"
+                      fontSize="18px"
+                      _hover={{ backgroundColor: "#11daac"}}
+                    >
+                        Sign In
+                    </Button>
+                ) : (
+                    <Button 
+                      bgColor={"#cccccc"}
+                      width="100%"
+                      borderRadius={"35px/35px"}
+                      fontSize="18px"
+                      h="50px"
+                      _hover={{backgroundColor: "#cccccc"}}
+                    >
+                        Sign In
+                    </Button>
+                ) }
+
+                <HStack></HStack>
             </Box>
             </ModalBody>
         </ModalContent>
