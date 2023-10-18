@@ -154,6 +154,10 @@ const Signup = () => {
                       fontSize="16px"
                       onChange={handleChange}
                       focusBorderColor='rgb(206, 206, 223)'
+                      name='first_name'
+                      placeholder='First Name'
+                      h={"45px"}
+                      borderColor={"rgb(206, 206, 223)"}
                       m={"8px 0px 15px 0px"}
                       rounded="2xl"
                     />
@@ -333,13 +337,18 @@ const Signup = () => {
                     </Button>
                   )}
 
-                  
+                  <Center mt={"14px"} fontSize="15px" gap="2">
+                    Have an Account?{" "}
+                    <Center fontWeight={"500"} textDecoration="underline">
+                        Sign In
+                    </Center>
+                  </Center>
                 </Box>
             </ModalBody>
         </ModalContent>
       </Modal>
     </div>
   );
-}
+};
 
 export default Signup;
