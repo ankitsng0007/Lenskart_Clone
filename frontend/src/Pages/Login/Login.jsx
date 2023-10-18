@@ -1,4 +1,4 @@
-import { Box, Button, Center, Checkbox, Flex, HStack, Heading, Image, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
+import { Box, Button, Center, Checkbox, Flex, HStack, Heading, Image, Input, InputGroup, InputRightElement, Link, Modal, ModalBody, ModalCloseButton, ModalContent, ModalOverlay, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../ContextApi/AuthContext';
 import { useNavigate } from 'react-router-dom';
@@ -250,13 +250,24 @@ const Login = (props) => {
                     </Button>
                 ) }
 
-                <HStack></HStack>
+                <HStack spacing={"0px"} mt="19px" gap="2">
+                    <Box fontSize={"14px"}>
+                        New Member?
+                    </Box>
+                    <Link
+                      fontSize="15px"
+                      fontWeight="500"
+                      textDecoration={"underline"}
+                    >
+                    Create an Account 
+                    </Link>
+                </HStack>
             </Box>
             </ModalBody>
         </ModalContent>
       </Modal>
     </div>
   );
-}
+};
 
 export default Login;
