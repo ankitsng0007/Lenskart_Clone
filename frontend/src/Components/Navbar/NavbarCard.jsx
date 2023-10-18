@@ -9,6 +9,7 @@ import { TriangleDownIcon } from "@chakra-ui/icons";
 import { CiHeart } from "react-icons/ci";
 import { CgShoppingCart} from "react-icons/cg";
 import Signup from "../../Pages/SignUp/Signup";
+import Login from "../../Pages/Login/Login";
 
 
 export const NavbarCard1 = () =>{
@@ -110,6 +111,7 @@ export const NavbarCard2 = () => {
                             </Popover>
                         ) : (
                             <Box display={"flex"}>
+                               <Login />
                                <Signup />
                                
                             </Box>
