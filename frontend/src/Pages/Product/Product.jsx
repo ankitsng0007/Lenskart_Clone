@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../../Components/Navbar/Navbar';
-import { Box, Flex, Image, Switch, Text } from '@chakra-ui/react';
+import { Box, Flex, Image, Select, Switch, Text } from '@chakra-ui/react';
 import ProdFrame from './ProdFrame';
 import {Frame1, Frame2, FrameColor, Gender, ProductTypes} from "./FilterDetail";
 import ProdFilter from './ProdFilter';
+import {TbArrowsUpDown} from "react-icons/tb";
+import Footer from '../../Components/Footer/Footer';
+import Loading from './Loading';
+import ProductCard from './ProductCard';
+
+
 
 const Product = () => {
      const [products, setProducts] = useState([]);
@@ -114,10 +120,54 @@ const Product = () => {
                             View 3D Try ON
                         </Text>
                     </Flex>
+                    <Flex>
+                        <Flex alignItems="center">
+                            <TbArrowsUpDown color='green' fontWeight="bold" />
+                            <Text fontWeight="bold" color="green" fontSize="15px">
+                                Sort By
+                            </Text>
+                        </Flex>
+                        <Select
+                          value={sort}
+                          onChange={(e) => setSort(e.target.value)}
+                          border="0.1px"
+                          borderRadius="3px"
+                          borderColor="black"
+                          ml="4px"
+                          p="0px"
+                          fontSize="16px"
+                          bg="whiteAlpha.900"
+                        >
+                            <option value="">Select</option>
+                            <option value="lowtohigh">Price : low to high</option>
+                            <option value="hightolow">Price : high to low</option>
+                        </Select>
+                    </Flex>
                 </Flex>
+                {products.length !== 0 && (
+                    <Text>
+                        Showing {products.length} of 50 Result
+                    </Text>
+                )}
+                {isLoaded ? (
+                    <Loading />
+                ) : products.length !==0 ? (
+                    <ProductCard type={products}/>
+                ) : (
+                    <Text
+                    fontSize="28px"
+                    fontWeight="bolder"
+                    textAlign="center"
+                    color="gray"
+                    mt="5"
+                    >
+                        No Glass Found
+                    </Text>
+                )}
             </Box>
         </Flex>
     </Box>
+    <Footer />
     </>
   );
 }
