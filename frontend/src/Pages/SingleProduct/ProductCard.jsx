@@ -1,5 +1,7 @@
-import { Box, Button, Flex, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Image, Text } from '@chakra-ui/react';
 import React from 'react';
+import ProductDetails from './ProductDetails';
+import { ProdImage } from './ProductImage';
 
 const ProductCard = ({type, handleCart, handleWishlist}) => {
   return (
@@ -100,8 +102,32 @@ const ProductCard = ({type, handleCart, handleWishlist}) => {
       >
         Add to Wishlist
       </Button>
+      <Button
+        p={{ lg: 7, base: 0 }}
+        m={{ lg: "10px 20px", base: "10px auto" }}
+        w={{ lg: "90%", base: "100%" }}
+        bg="whiteAlpha.900"
+        border="1px"
+        borderColor="gray.400"
+      >
+        <Text ml="20" fontSize={{ lg: "md", md: "md", base: "sm" }}>
+          Try On
+        </Text>
+        <Image
+          src="https://static.lenskart.com/media/desktop/img/pdp/try_on_model.png"
+          alt="img"
+          ml="20"
+        />
+      </Button>
+      <br />
+      <br />
+
+      <ProductDetails type={type} />
+      {ProdImage.map((ele,i) => (
+        <Image src={ele.src} key={i} />
+      ))}
     </Box>
   );
-}
+;}
 
 export default ProductCard;
