@@ -9,7 +9,7 @@ const AlRoutes = () => {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/products' element={<Product />}></Route>
-        <Route path="/products/:id" element={<SingleProduct />} />
+        <Route path="/product" element={<SingleProduct />} />
       </Routes>
     </div>
   );

@@ -7,6 +7,8 @@ import { Grid, GridItem, Image } from '@chakra-ui/react';
 import ProductCard from './ProductCard';
 import {ProdImage} from "./ProductImage";
 import Footer from '../../Components/Footer/Footer';
+import { addToCart } from "../../Redux/CartPage/action";
+import { addToWishlist } from "../../Redux/Wishlist/wishlist.action";
 
 const SingleProduct = () => {
     const {id } = useParams();
