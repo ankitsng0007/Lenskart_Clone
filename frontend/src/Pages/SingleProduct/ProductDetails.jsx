@@ -1,5 +1,5 @@
 import React from 'react';
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Flex } from "@chakra-ui/react";
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
 
 const ProductDetails = ({ type }) => {
   return (
@@ -63,6 +63,52 @@ const ProductDetails = ({ type }) => {
             <AccordionIcon />
           </AccordionButton>
             </h2>
+            <AccordionPanel pb={4}>
+          <Flex gap="4" p="4">
+            <Image
+              src="https://static.lenskart.com/media/desktop/img/pdp/visit_store.png"
+              alt="img"
+            />
+            <Box color="gray.500">
+              <Text>Please Share Your Location To See Nearby Stores</Text>
+              <Text color="#52aba3" fontWeight="600">
+                Store Locator
+              </Text>
+            </Box>
+          </Flex>
+        </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem>
+        <h2>
+          <AccordionButton>
+            <Box as="span" flex="1" textAlign="left" fontWeight="500">
+              Check Delivery Options
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        <AccordionPanel pb={4}>
+          <Input placeholder="Enter Pin Code" />
+        </AccordionPanel>
+        </AccordionItem>
+        <AccordionItem>
+        <h2>
+          <AccordionButton>
+            <Box as="span" flex="1" textAlign="left" fontWeight="500">
+              Review
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        <AccordionPanel pb={4}>
+          <Text textAlign="center" mb="4">
+            No Reviews
+          </Text>
+
+          <Button m="auto" w="100%" bg="#00bac6" color="white">
+            WRITE A REVIEW
+          </Button>
+        </AccordionPanel>
         </AccordionItem>
     </Accordion>
   );
