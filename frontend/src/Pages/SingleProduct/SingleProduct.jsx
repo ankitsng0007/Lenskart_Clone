@@ -6,6 +6,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import { Grid, GridItem, Image } from '@chakra-ui/react';
 import ProductCard from './ProductCard';
 import {ProdImage} from "./ProductImage";
+import Footer from '../../Components/Footer/Footer';
 
 const SingleProduct = () => {
     const {id } = useParams();
@@ -130,6 +131,8 @@ const SingleProduct = () => {
           <Image src={data.imageTsrc} />
         </GridItem>
     </Grid>
+
+    <Footer />
     </>
   );
 }
