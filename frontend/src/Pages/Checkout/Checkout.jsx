@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {addToOrder} from "../../Redux/Order/order.action";
 import {cartReset} from "../../Redux/CartPage/action";
-import { Box, Button, Flex, Grid, HStack, Image, Spacer, Switch } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, HStack, Image, Spacer, Switch, Text } from "@chakra-ui/react";
 import Navbar, {} from "../../Components/Navbar/Navbar"
-
+import Footer, {} from "../../Components/Footer/Footer";
 
 const Orders = () => {
     const navigate = useNavigate();
@@ -263,7 +263,87 @@ const Orders = () => {
           </Box>
           </Box>
             </HStack>
+            {cart.map((el) => {
+                return (
+                    <Box border={"1px"} borderColor="gray.300">
+                        <Grid
+                          templateColumns={{
+                            base: "repeat(1,1fr)",
+                            sm: "repeat(1,1fr)",
+                            md: "35% 60%",
+                            lg: "25% 70%",
+                            xl: "20% 80%"
+                          }}
+                          color="gray.600"
+                          p="2"
+                          m={{ sm: "auto", base: "auto" }}
+                          textAlign={{ md: "left", sm: "center", base: "center" }}
+                        >
+                            <Image 
+                               src={el.imageTsrc}
+                               w={"200px"}
+                               h="100px"
+                               m={{
+                                 lg: "10px 0px 10px 10px",
+                                 md: "10px 0px 10px 10px",
+                                 sm: "auto",
+                                 base: "auto"
+                               }}
+                            />
+                            <Box>
+                                <Box
+                                  m="10px 5px 5px 0px"
+                                  fontSize="17px"
+                                  textTransform="capitalize"
+                                  color="gray.500"
+                                  fontWeight="bold"
+                                >
+                                    {el.productRefLink || "Vincent Chase Eyeglasses"}
+                                </Box>
+                                <Box fontSize="15px" mb="4px" fontWeight="500">
+                                    + Hydrophobic Anti-Glare
+                                </Box>
+                                <Box 
+                                  fontSize="14px"
+                                  mb={"6px"}
+                                  color={"gray"}
+                                  fontWeight={"500"}
+                                >
+                                    Sold By Lenskart PvtLtd.
+                                </Box>
+                                <Flex
+                                  fontWeight={"500"}
+                                  gap="1"
+                                  justifyContent={{
+                                    md: "left",
+                                    sm: "center",
+                                    base: "center"
+                                  }}
+                                >
+                                    <Text fontSize="18px">
+                                    ₹{Math.round(el.price + el.price * 0.18)}.00
+                                    </Text>
+
+                                    <Text fontSize="sm" mt="1">
+                                        (Included All Taxes)
+                                    </Text>
+                                </Flex>
+                                <Box fontWeight={"500"} fontSize="16px" mb="5">
+                                   {" "}
+                                   Qty : {el.quantity < 10 ? `0${el.quantity}` : el.quantity}
+                                </Box>
+                            </Box>
+                        </Grid>
+                    </Box>
+                )
+            })}
+
+            <br />
+            <br />
+            <br />
+            <br />
             </Box>
+            <Footer />
     </Box>
   );
 }

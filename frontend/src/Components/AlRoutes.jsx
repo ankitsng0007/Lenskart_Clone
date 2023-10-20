@@ -4,6 +4,7 @@ import Home from '../Pages/Home/Home';
 import Product from '../Pages/Product/Product';
 import SingleProduct from '../Pages/SingleProduct/SingleProduct';
 import CartPage from '../Pages/Cart';
+import Orders from '../Pages/Checkout/Checkout';
 const AlRoutes = () => {
   return (
     <div>
@@ -13,6 +14,8 @@ const AlRoutes = () => {
         <Route path="/product" element={<SingleProduct />} />
 
         <Route path='/cart' element={<CartPage />}></Route>
+
+        <Route path='/checkout' element={<Orders />}></Route>
       </Routes>
     </div>
   );
