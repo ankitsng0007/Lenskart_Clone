@@ -16,7 +16,7 @@ const Orders = () => {
         return totalPrice;
     };
 
-    const 
+    
 
   return (
     <div>
