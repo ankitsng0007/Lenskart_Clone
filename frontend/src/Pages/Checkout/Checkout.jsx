@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {addToOrder} from "../../Redux/Order/order.action";
 import {cartReset} from "../../Redux/CartPage/action";
-import { Box, Flex, Grid, HStack, Image, Spacer, Switch } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, HStack, Image, Spacer, Switch } from "@chakra-ui/react";
 import Navbar, {} from "../../Components/Navbar/Navbar"
 
 
@@ -200,11 +200,70 @@ const Orders = () => {
                             <Box fontWeight={"500"} fontSize="15px">
                                 Complete Your Payment
                             </Box>
+                            <Box
+                              fontWeight={"350"}
+                              fontSize="15px"
+                              flexWrap={"nowrap"}
+                              display="flex"
+                            >
+                           Order will be processed after payment
+                           </Box>
                         </Box>
+                        <Grid
+                          templateColumns={{
+                            base: "repeat(1,1fr)",
+                            sm: "repeat(2,1fr)",
+                            md: "repeat(2,1fr)",
+                            lg: "repeat(2,1fr)",
+                            xl: "repeat(2,1fr)"
+                          }}
+                          justifyContent="space-between"
+                          gap="4"
+                          w="100%"
+                          m="auto"
+                        >
+                            <Button
+                              fontSize={"15px"}
+                              bg="#3bb3a9"
+                              color={"white"}
+                              borderRadius="4px"
+                              p="15px 35px"
+                              _hover={{ backgroundColor: "teal" }}
+                              onClick={() => navigate("/payment")}
+                            >
+                                Pay Now
+                            </Button>
+                            <Button
+                               fontSize={"15px"}
+                               bg="#3bb3a9"
+                               color={"white"}
+                               borderRadius="4px"
+                               p="15px 35px"
+                              _hover={{ backgroundColor: "teal" }}
+                              onClick={handleClick}
+                            >
+                            CASH ON DELIVERY
+                           </Button>
+                        </Grid>
                     </Grid>
                 </Box>
             </Box>
-        </Box>
+            <HStack border={"1px"} p="10px 10px 10px 25px" borderColor="gray.300">
+            <Image
+              mr="10px"
+              src="https://static.lenskart.com/media/mobile/universal/assets/status-pending.png"
+              alt="warning"
+          />
+          <Box>
+          <Box color={"red"} fontWeight="500" fontSize={"15px"}>
+            Payment Pending
+          </Box>
+          <Box color={"gray"} fontSize="15px">
+            Complete Your Payment to Process Order
+          </Box>
+          </Box>
+            </HStack>
+            </Box>
     </Box>
   );
 }
