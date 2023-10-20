@@ -181,6 +181,27 @@ const Orders = () => {
                             </Flex>
                         )}
                     </Grid>
+                    <Grid
+                      mt={"20px"}
+                      p="10px"
+                      spacing={""}
+                      w="100%"
+                      templateColumns={{
+                        base: "repeat(1,1fr)",
+                        sm: "repeat(1,1fr)",
+                        md: "repeat(2,1fr)",
+                        lg: "60% 40%",
+                        xl: "60% 30%"
+                      }}
+                      gap={{ sm: "4", base: "4" }}
+                      justifyContent={"space-between"}
+                    >
+                        <Box>
+                            <Box fontWeight={"500"} fontSize="15px">
+                                Complete Your Payment
+                            </Box>
+                        </Box>
+                    </Grid>
                 </Box>
             </Box>
         </Box>
