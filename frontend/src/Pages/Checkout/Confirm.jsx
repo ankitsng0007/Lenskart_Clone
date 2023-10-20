@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import Navbar, {} from "../../Components/Navbar/Navbar";
 import Footer, {} from "../../Components/Footer/Footer";
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 
 
 const Confirm = () => {
