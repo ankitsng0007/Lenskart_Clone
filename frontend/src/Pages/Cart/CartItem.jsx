@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector, useDispatch } from "react-redux";
 import {removeFromCart, decrement, increment} from "../../Redux/CartPage/action";
-import { Box, Button, Flex, Grid, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, Heading, Image, Text } from '@chakra-ui/react';
 
 
 const CartItem = () => {

@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Input, useToast } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
+import { coupon } from '../../Redux/CartPage/action';
 
 
 const CouponBox = () => {
