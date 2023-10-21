@@ -323,6 +323,6 @@ const Payment = () => {
     </Box>
     </>
   );
-}
+};
 
 export default Payment;

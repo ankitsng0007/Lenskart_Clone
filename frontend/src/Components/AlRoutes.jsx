@@ -8,6 +8,7 @@ import Orders from '../Pages/Checkout/Checkout';
 import Confirm from '../Pages/Checkout/Confirm';
 import OrderHistory from '../Pages/OrderHistory/OrderHistory';
 import Wishlist from '../Pages/Wishlist/Wishlist';
+import Payment from '../Pages/Payment/Payment';
 const AlRoutes = () => {
   return (
     <div>
@@ -19,6 +20,8 @@ const AlRoutes = () => {
         <Route path='/cart' element={<CartPage />}></Route>
 
         <Route path='/checkout' element={<Orders />}></Route>
+
+        <Route path='/payment' element={<Payment />}></Route>
       
         <Route path='/confirm' element={<Confirm />}></Route>
 
