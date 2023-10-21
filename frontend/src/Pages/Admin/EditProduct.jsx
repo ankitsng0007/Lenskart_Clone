@@ -49,11 +49,83 @@ const EditProduct = () => {
     })
     .catch((err) => console.log(err));
   }, []);
+
+  const handleEdit = async (e) => {
+    e.preventDefault();
+    try{
+        setLoading(true);
+        const payload = {
+            imageTsrc: imageTsrc,
+        productRefLink: productRefLink,
+        rating: rating,
+        userRated: userRated,
+        price: price,
+        mPrice: mPrice,
+        name: name,
+        shape: shape,
+        gender: gender,
+        style: style,
+        dimension: dimension,
+        productType: productType,
+        colors: colors,
+        productId: productId,
+        quantity: quantity,
+        id: Math.round(Math.random() * Date.now() * 10000000)
+        };
+
+        const response = await fetch(
+            `https://harlequin-fawn-tutu.cyclic.app/product/${id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        }
+        );
+
+        if(response.status === 204){
+            setLoading(false);
+            toast({
+                title: "Product Updated Successfully",
+                status: "success",
+                duration: 2000,
+                isClosable: true,
+                position: "bottom"
+              });
+              setTimeout(() => {
+                navigate("/productlist");
+              }, 1000);
+        } else {
+            setLoading(false);
+        toast({
+          title: "Product Updated Successfully",
+          status: "success",
+          duration: 1000,
+          isClosable: true,
+          position: "bottom"
+        });
+        setTimeout(() => {
+          navigate(`/productlist`);
+        }, 1000);
+        }
+    }catch(error){
+        setLoading(false);
+      console.log("An error occurred. Please try again later.");
+      toast({
+        title: "An error occurred. Please try again",
+        status: "error",
+        duration: 1000,
+        isClosable: true,
+        position: "bottom"
+      });
+    }
+  };
   return (
     <div>
       
     </div>
   );
-}
+  }
 
 export default EditProduct;
