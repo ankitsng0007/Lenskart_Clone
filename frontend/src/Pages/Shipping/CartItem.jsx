@@ -111,6 +111,29 @@ const CartItem = () => {
                 <Text fontWeight="bold">SUBTOTAL</Text>
                 <Text fontWeight="medium">₹{getTotalPrice()}.00</Text>                           
             </Flex>
+            <Divider h={2} mb={2} />
+            <Flex justifyContent={"space-between"} fontSize="15px" mb={2}>
+            <Text fontWeight="bold">TAX COLLECTED</Text>
+            <Text fontWeight="medium">
+              + ₹{Math.round((getTotalPrice() - (coupon || 0)) * 0.18)}.00
+            </Text>
+            </Flex>
+            <Divider mb={2} border="1px solid" />
+            <Flex justifyContent={"space-between"} fontSize="16px">
+            <Text fontWeight="bold">
+              TOTAL ORDER{" "}
+              <span
+                style={{ fontSize: "14px", fontWeight: "500" }}
+                color="gray"
+              >
+                (After Tax)
+              </span>
+            </Text>
+            <Text fontWeight="medium">
+              ₹{Math.round(getTotalPrice() + getTotalPrice() * 0.18)}
+              .00
+            </Text>
+          </Flex>
         </Box>
       </Flex>
     </>
