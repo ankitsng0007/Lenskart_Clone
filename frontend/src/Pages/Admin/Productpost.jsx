@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Center, FormControl, Input, VStack, useToast } from "@chakra-ui/react";
+import { Box, Center, FormControl, Input, Select, VStack, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const Productpost = () => {
@@ -168,6 +168,102 @@ const Productpost = () => {
                 onChange={(e) => setMPrice(e.target.value)}
                 value={mPrice}
                 bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <Select
+              placeholder="Choose Frame Shape"
+              onChange={(e) => setShape(e.target.value)}
+              value={shape}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+                 <option value="Rectangle">Rectangle</option>
+              <option value="Round">Round</option>
+              <option value="Wayfarer">Wayfarer</option>
+              <option value="Butterfly">Butterfly</option>
+              <option value="Aviator">Aviator</option>
+              <option value="Wrapround">Wrap Round</option>
+              <option value="Cateye">Cateye</option>
+              <option value="Hexagon">Hexagon</option>
+              <option value="Square">Square</option>
+            </Select>
+          </FormControl>
+          <br />
+          <FormControl>
+            <Select
+              placeholder="Choose Gender"
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+                 <option value="Men">Men</option>
+              <option value="Women">Women</option>
+              <option value="Kid">Kid</option>
+            </Select>
+          </FormControl>
+          <br />
+
+          <FormControl
+              placeholder="Choose Frame Types"
+              onChange={(e) => setStyle(e.target.value)}
+              value={style}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+          >
+            <Select>
+            <option value="Tinted">Tinted</option>
+              <option value="FullFrame">FullFrame</option>
+              <option value="Mirror">Mirror</option>
+            </Select>
+          </FormControl>
+          <br/>
+          <FormControl>
+            <Input 
+               type="text"
+               size="lg"
+               fontSize="16px"
+               h="40px"
+               placeholder="Enter Frame Dimension"
+               onChange={(e) => setDimension(e.target.value)}
+               value={dimension}
+               bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br/>
+          <FormControl>
+            <Select
+              placeholder="Choose Glass"
+              value={productType}
+              onChange={(e) => setProductType(e.target.value)}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+            <option value="sunglasses">Sun Glass</option>
+              <option value="eyeglasses">Eye Glass</option>
+            </Select>
+          </FormControl>
+          <br/>
+          <FormControl>
+            <Input 
+               type="text"
+               size="lg"
+               fontSize="16px"
+               h="40px"
+               placeholder="Enter Frame Colour"
+               onChange={(e) => setColors(e.target.value)}
+               value={colors}
+               bg="whiteAlpha.900"
             />
           </FormControl>
             </VStack>
