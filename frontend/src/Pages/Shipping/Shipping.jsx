@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Input, Radio, RadioGroup, Stack, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -147,6 +147,61 @@ const Shipping = () => {
             >
               Shipping Address
             </Text>
+
+            <Box border="1px solid black" p="4" borderRadius="xl" mt="7">
+                <Grid
+                  templateColumns={{
+                    base: "repeat(1,1fr)",
+                    sm: "repeat(1,1fr)",
+                    md: "repeat(2,1fr)",
+                    lg: "repeat(2,1fr)"
+                  }}
+                  w="100%"
+                  gap={{ sm: "4", base: "4" }}
+                >
+                    <Box>
+                        <Input 
+                          type="text"
+                          name="first_name"
+                          fontSize="16px"
+                          onChange={handleChange}
+                          placeholder="First Name*"
+                          className="input"
+                        />
+                        <Box pl="6" mt="-4">                            
+                        {first}
+                        </Box>
+                    </Box>
+                    <Box>
+                        <Input 
+                            type="text"
+                            name="last_name"
+                            placeholder="Last Name*"
+                            className="input"
+                            fontSize="16px"
+                            onChange={handleChange}
+                        />
+                        <Box pl="6" mt="-4">
+                    {last}
+                  </Box>
+                    </Box>
+                </Grid>
+
+                <Flex
+                  fontSize="15px"
+                  p="10px"
+                  m="10px 0px 0px 22px"
+                  gap={{ lg: "4", sm: "1", base: "1" }}
+                >
+                    <Text>Gender</Text>
+                    <RadioGroup onChange={setGender} value={gender} name={gender}>
+                  <Stack direction="row" gap={{ lg: "2", sm: "1", base: "1" }}>
+                    <Radio value="Male">Male</Radio>
+                    <Radio value="Female">Female</Radio>
+                  </Stack>
+                </RadioGroup>
+                </Flex>
+            </Box>
             </Box>
         </GridItem>
       </Grid>
