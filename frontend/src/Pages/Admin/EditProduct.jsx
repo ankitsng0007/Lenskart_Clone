@@ -1,6 +1,7 @@
-import { useToast } from '@chakra-ui/react';
+import { Box, Center, Heading, VStack, useToast } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const EditProduct = () => {
     const toast = useToast();
@@ -122,9 +123,23 @@ const EditProduct = () => {
     }
   };
   return (
-    <div>
-      
-    </div>
+    <Box bg="gray.200" minH="710px">
+        <Navbar />
+        <br />
+        <br />
+        <Center>
+            <VStack
+              w={{ lg: "650px", md: "650px", sm: "90%", base: "95%" }}
+              mb={{ lg: "0", md: "0", sm: "4", base: "4" }}
+              borderRadius="xl"
+              boxShadow="dark-lg"
+              p="10"
+              bg="whiteAlpha.900"
+            >
+                <Heading>Edit Product</Heading>
+            </VStack>
+        </Center>
+    </Box>
   );
   }
 

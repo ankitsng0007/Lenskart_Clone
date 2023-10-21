@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Grid, GridItem, Heading, Input, Select, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr, useToast } from "@chakra-ui/react";
+import Navbar from './Navbar';
 
 
 const Productlist = () => {
@@ -63,7 +64,7 @@ const Productlist = () => {
 
   return (
     <Box bg="gray.200" minH="710px">
-        
+        <Navbar />
         <br/>
         <Grid
           templateColumns={{
