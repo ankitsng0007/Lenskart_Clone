@@ -18,7 +18,7 @@ const Payment = () => {
     const [cards, setCards] = useState();
     const [dates, setDates] = useState();
     const [cv, setCv] = useState();
-    const [names, SetNames] = useState();
+    const [names, setNames] = useState();
 
     const Required = (props) => {
         return (
@@ -33,6 +33,55 @@ const Payment = () => {
             </Box>
         );
     };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUserData({ ...userData, [name]: value });
+
+        switch(name){
+            case "card":
+                setCards(
+                    value === "" ? (
+                        <Required info="This is a required field" />
+                    ) : (
+                        <Required info="Card Number should be 16 digit (eg. xxxxxxxxxxxxxxxx" />
+                    )
+                );
+                break;
+
+                case "date" :
+                    setDates(
+                        value === "" ? (
+                            <Required info="This is a required field" />
+                        ) : (
+                            <Required info="Please Enter a valid month & Year formate ( eg. MM/YY)" />
+                        )
+                    );
+                    break;
+
+                    case "cvv":
+        setCv(
+          value === "" ? (
+            <Required info="This is a required feild" />
+          ) : (
+            <Required info="CVV should be 3 digit (eg. XXX)" />
+          )
+        );
+        break;
+
+      case "cardname":
+        setNames(
+          value === "" ? <Required info="This is a required feild" /> : ""
+        );
+        break;
+
+      default:
+        break;
+    }
+  };
+
+        }
+    }
   return (
     <div>
       
