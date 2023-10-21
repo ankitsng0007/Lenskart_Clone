@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Center, FormControl, Input, Select, VStack, useToast } from "@chakra-ui/react";
+import { Box, Button, Center, FormControl, Input, Select, VStack, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const Productpost = () => {
@@ -266,10 +266,37 @@ const Productpost = () => {
                bg="whiteAlpha.900"
             />
           </FormControl>
+          <br />
+
+          {loading ? (
+            <Button
+            isLoading
+            loadingText="Submitting"
+            colorScheme="blue"
+            fontSize="20px"
+            py="4"
+            w="100%"
+            borderRadius="lg"
+            variant="outline"
+            >
+                Submit
+            </Button>
+          ) : (
+            <Button
+            colorScheme="blue"
+            fontSize="20px"
+            py="4"
+            w="100%"
+            borderRadius="lg"
+            onClick={handleSubmit}
+            >
+                Submit
+            </Button>
+          )}
             </VStack>
         </Center>
     </Box>
   );
-}
+};
 
 export default Productpost;
