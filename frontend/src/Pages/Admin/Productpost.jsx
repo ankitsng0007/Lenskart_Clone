@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Box, Button, Center, FormControl, Input, Select, VStack, useToast } from "@chakra-ui/react";
+import { Box, Button, Center, FormControl, Heading, Input, Select, VStack, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import Navbar from './Navbar';
 
 const Productpost = () => {
     const toast = useToast();
@@ -54,7 +55,7 @@ const Productpost = () => {
             };
 
             const response = await fetch(
-                "",{
+                "http://localhost:8080/product",{
                     method: "POST",
                     body: JSON.stringify(payload),
                     headers: { "Content-Type": "application/json"}
@@ -103,7 +104,7 @@ const Productpost = () => {
 
   return (
     <Box bg="gray.200" minH="710px">
-        
+        <Navbar />
 
         <br/>
         <br/>
