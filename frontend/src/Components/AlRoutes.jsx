@@ -9,6 +9,7 @@ import Confirm from '../Pages/Checkout/Confirm';
 import OrderHistory from '../Pages/OrderHistory/OrderHistory';
 import Wishlist from '../Pages/Wishlist/Wishlist';
 import Payment from '../Pages/Payment/Payment';
+import CartItem from '../Pages/Shipping/CartItem';
 const AlRoutes = () => {
   return (
     <div>
@@ -28,6 +29,8 @@ const AlRoutes = () => {
         <Route path='/orderhistory' element={<OrderHistory />}></Route>
 
         <Route path='/wishlist' element={<Wishlist />}></Route>
+
+        <Route path='/cartitem' element={<CartItem />} ></Route>
       </Routes>
     </div>
   );
