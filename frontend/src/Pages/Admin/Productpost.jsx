@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useToast } from "@chakra-ui/react";
+import { Box, Center, FormControl, Input, VStack, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const Productpost = () => {
@@ -102,9 +102,77 @@ const Productpost = () => {
 };
 
   return (
-    <div>
-      
-    </div>
+    <Box bg="gray.200" minH="710px">
+        
+
+        <br/>
+        <br/>
+        <Center>
+            <VStack
+               w={{ lg: "650px", md: "650px", sm: "90%", base: "95%" }}
+               mb={{ lg: "0", md: "0", sm: "4", base: "4" }}
+               borderRadius="xl"
+               boxShadow="dark-lg"
+               p="10"
+               bg="whiteAlpha.900"
+            >
+            <Heading fontSize="30px">Product Register Form</Heading>
+          <br />
+          <br />
+          <FormControl>
+            <Input 
+              type="text"
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <Input 
+               type="text"
+               size="lg"
+               fontSize="16px"
+               h="40px"
+               placeholder="Enter Image Url"
+               onChange={(e) => setImageTsrc(e.target.value)}
+               value={imageTsrc}
+               bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <Input 
+               type="Number"
+               size="lg"
+               fontSize="16px"
+               h="40px"
+               placeholder="Enter Discounted Price"
+               onChange={(e) => setPrice(e.target.value)}
+               value={price}
+               bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <Input 
+                type="Number"
+                size="lg"
+                fontSize="16px"
+                h="40px"
+                placeholder="Enter Original Price"
+                onChange={(e) => setMPrice(e.target.value)}
+                value={mPrice}
+                bg="whiteAlpha.900"
+            />
+          </FormControl>
+            </VStack>
+        </Center>
+    </Box>
   );
 }
 
