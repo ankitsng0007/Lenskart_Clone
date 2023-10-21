@@ -1,10 +1,11 @@
-import { Box, Flex, Grid, Image, Input } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, Image, Input } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addToOrder } from '../../Redux/Order/order.action';
 import { cartReset } from '../../Redux/CartPage/action';
 import Navbar from '../../Components/Navbar/Navbar';
+import Footer from '../../Components/Footer/Footer';
 
 const Payment = () => {
     const init = {
@@ -244,12 +245,81 @@ const Payment = () => {
                                       maxLength="3"
                                     />
                                 </Flex>
+
+                                <Box mt="-2" ml="2%">
+                                    {userData.date.includes("/") ? "" : dates}
+                                </Box>
+                                <Box ml="2%">{userData.cvv.length === 3 ? "" : cv}</Box>
+
+                                <Box>
+                                    <Input 
+                                      placeholder="Cardholder Name"
+                                      type="text"
+                                      name="cardname"
+                                      onChange={handleChange}
+                                      fontSize="lg"
+                                      h="40px"
+                                      borderRadius="lg"
+                                      p="2%"
+                                      m="20px 10px 20px 10px"
+                                      w="70%"
+                                    />
+                                    <Box mt="-4" ml="2%">
+                                        {names}
+                                    </Box>
+                                </Box>
+                                <br/>
+                                <br/>
+
+                                {userData.cardname.length >= 1 &&
+                                  userData.card.length === 16 &&
+                                  userData.cvv.length === 3 &&
+                                  userData.date.includes("/") ? (
+                                    <Button
+                                    fontSize={"16px"}
+                                    bg="#3bb3a9"
+                                    color={"white"}
+                                    p="25px 22px"
+                                    _hover={{ backgroundColor: "teal" }}
+                                    onClick={handleClick}
+                                    borderRadius="lg"
+                                    >
+                                        Place Order
+                                    </Button>
+                                  ) : (
+                                    <Button
+                                    fontSize={"16px"}
+                                    bg="#cccccc"
+                                    color={"white"}
+                                    p="25px 22px"
+                                    borderRadius="lg"
+                                    >
+                                        Place Order
+                                    </Button>
+                                  )}
                             </Box>
                         </Box>
+                        <Box p="10px" fontSize="lg" fontWeight="medium" color="gray.500">
+                           GlassCart Assurance
+                        </Box>
+                        <Image
+                          p="10px"
+                          w="90%"
+                          m="auto"
+                          src="https://static1.lenskart.com/media/desktop/img/all-assurance-offering.png"
+                          _hover={{ transform: "scale(1.1)" }}
+                        />
+                        <br/>
                     </Box>
+                    <br/>
+                    <br/>
                 </Box>
             </Box>
         </Box>
+        <br/>
+        <br/>
+        <br/>
+        <Footer />
     </Box>
     </>
   );
