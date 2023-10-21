@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Image } from '@chakra-ui/react';
+import { Box, Flex, Grid, Image, Input } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -198,6 +198,53 @@ const Payment = () => {
                                     }}
                                 />
                             </Grid>
+                            <br />
+                            <Box>
+                                <Input 
+                                   placeholder="Enter Card Number"
+                                   name="card"
+                                   type="Number"
+                                   onChange={handleChange}
+                                   m="20px 10px 10px 10px "
+                                   fontSize="lg"
+                                   h="40px"
+                                   borderRadius="lg"
+                                   p="2%"
+                                   w="70%"
+                                />
+                                <Box>
+                                    {userData.card.length === 16 ? "" : cards}
+                                </Box>
+
+                                <Flex m="20px 0px" w="50%">
+                                    <Input 
+                                      placeholder="MM/YY"
+                                      name="date"
+                                      type="text"
+                                      onChange={handleChange}
+                                      mr="10px"
+                                      ml="10px"
+                                      fontSize="lg"
+                                      h="40px"
+                                      w="40%"
+                                      borderRadius="lg"
+                                      p="2%"
+                                    />
+
+                                    <Input 
+                                      placeholder="CVV"
+                                      type="Number"
+                                      name="cvv"
+                                      onChange={handleChange}
+                                      fontSize="lg"
+                                      h="40px"
+                                      borderRadius="lg"
+                                      p="2%"
+                                      w="30%"
+                                      maxLength="3"
+                                    />
+                                </Flex>
+                            </Box>
                         </Box>
                     </Box>
                 </Box>
