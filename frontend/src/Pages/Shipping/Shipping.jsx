@@ -270,7 +270,7 @@ const Shipping = () => {
                   </Box>
                     </Box>
                     <Box>
-                  <input
+                  <Input
                     className="input"
                     type="text"
                     placeholder="Address Line 2"
@@ -304,7 +304,7 @@ const Shipping = () => {
                         </Box>
                     </Box>
                     <Box>
-                  <input
+                  <Input
                     className="input"
                     type="text"
                     placeholder="City/District*"
@@ -344,7 +344,7 @@ const Shipping = () => {
                   </Box>
                     </Box>
                     <Box>
-                  <input
+                  <Input
                     className="input"
                     type="text"
                     placeholder="State*"
@@ -402,7 +402,7 @@ const Shipping = () => {
             </Box>
         </GridItem>
         <GridItem w={{ xl: "90%", lg: "80%", md: "80%", base: "80%" }} m="auto">
-          <CartItem />
+    
         </GridItem>
       </Grid>
       <br />

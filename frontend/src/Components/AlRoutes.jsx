@@ -10,6 +10,7 @@ import OrderHistory from '../Pages/OrderHistory/OrderHistory';
 import Wishlist from '../Pages/Wishlist/Wishlist';
 import Payment from '../Pages/Payment/Payment';
 import CartItem from '../Pages/Shipping/CartItem';
+import Shipping from '../Pages/Shipping/Shipping';
 const AlRoutes = () => {
   return (
     <div>
@@ -31,6 +32,8 @@ const AlRoutes = () => {
         <Route path='/wishlist' element={<Wishlist />}></Route>
 
         <Route path='/cartitem' element={<CartItem />} ></Route>
+
+        <Route path='/shipping' element={<Shipping />}></Route>
       </Routes>
     </div>
   );
