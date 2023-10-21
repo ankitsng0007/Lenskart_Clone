@@ -1,0 +1,29 @@
+
+Search by name
+
+All Glasses
+
+For all Gender
+
+Low to High
+
+Choose Frame Shape
+
+Choose Frame Types
+
+
+Product List
+
+EDIT	DELETE	NAME	SHAPE	COLORS	GENDER	STYLE	DIMENSION	PRODUCT TYPE	ORGINAL PRICE	DISCOUNTED PRICE	RATING	IMAGE URL
+Blue Tinted Wayfarer Sunglasses	Wayfarer	Blue	Men,Women	Tinted	51-18-145	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S15B4211/S15B4211-1.jpg
+Purple Tinted Wayfarer Sunglasses	Wayfarer	Purple	Men	Tinted	50-14-140	Sunglasses	₹ 2199	₹ 925	2.4	https://cdn.eyemyeye.com/shared/images/products/S66B4680/S66B4680-1.jpg
+Brown Tinted Round Sunglasses	Round	Brown	Men,Women	Tinted	48-28-138	Sunglasses	₹ 2199	₹ 925	4.2	https://cdn.eyemyeye.com/shared/images/products/S12A4733/S12A4733-1.jpg
+Green Tinted Wraparound Sunglasses	Wrapround	Brown,Green,Green	Men	Tinted	53-15-149	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S66B2000/S66B2000-1.jpg
+Brown Tinted Wayfarer Sunglasses	Wayfarer	Smoke,Brown	Men	Tinted	53-19-141	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S17A3298/S17A3298-1.jpg
+Brown Tinted Wayfarer Sunglasses	Wayfarer	Black,Smoke,Brown	Men,Women	Tinted	50-19-150	Sunglasses	₹ 2199	₹ 925	2.8	https://cdn.eyemyeye.com/shared/images/products/S75B2001/S75B2001-1.jpg
+Purple Tinted Wayfarer Sunglases	Wayfarer	Purple	Women	Tinted	55-17-146	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S25B3667/S25B3667-1.jpg
+Smoke Tinted Wayfarer Sunglasses	Wayfarer	Smoke	Men,Women	Tinted	50-18-138	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S15C4698/S15C4698-1.jpg
+Black Tinted Wayfarer Sunglasses	Wayfarer	Smoke,Black	Men,Women	Tinted	53-18-140	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S25B3675/S25B3675-1.jpg
+Brown Tinted Wayfarer Sunglasses	Wayfarer	Smoke,Blue,Brown	Men,Women	Tinted	52-18-140	Sunglasses	₹ 2199	₹ 925	3.5	https://cdn.eyemyeye.com/shared/images/products/S66A4672/S66A4672-1.jpg
+Smoke Tinted Wayfarer Sunglasses	Wayfarer	Black,BrownSmoke	Men,Women	Tinted	50-19-150	Sunglasses	₹ 2199	₹ 925	4.2	https://cdn.eyemyeye.com/shared/images/products/S12A2001/S12A2001-1.jpg
+Green Tinted Cateye Sunglasses	Cateye	Blue,Green	Women	Tinted	49-18-135	Sunglasses	₹ 2199	₹ 925	4.5	https://cdn.eyemyeye.com/shared/images/products/S25B3668/S25B3668-1.jpg

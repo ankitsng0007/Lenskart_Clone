@@ -12,6 +12,7 @@ import Payment from '../Pages/Payment/Payment';
 import CartItem from '../Pages/Shipping/CartItem';
 import Shipping from '../Pages/Shipping/Shipping';
 import Productpost from '../Pages/Admin/Productpost';
+import Productlist from '../Pages/Admin/Productlist';
 const AlRoutes = () => {
   return (
     <div>
@@ -37,6 +38,7 @@ const AlRoutes = () => {
         <Route path='/shipping' element={<Shipping />}></Route>
 
         <Route path='/productpost' element={<Productpost />}></Route>
+        <Route path='/productlist' element={<Productlist />}></Route>
       </Routes>
     </div>
   );
