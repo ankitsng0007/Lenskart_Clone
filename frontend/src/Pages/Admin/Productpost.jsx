@@ -71,12 +71,35 @@ const Productpost = () => {
             position: "bottom"
             });
             setTimeout(() => {
-                
-            })
-           } 
+                navigate("/productlist");
+            }, 1000);
+           } else {
+            setLoading(false);
+          const { message } = await response.json();
+          console.log(message);
+           }
+        }else {
+            setLoading(false);
+        toast({
+          title: "Please fill all the field",
+          status: "warning",
+          duration: 1000,
+          isClosable: true,
+          position: "bottom"
+        });
         }
+    } catch(error){
+        setLoading(false);
+      console.log("An error occurred. Please try again later.");
+      toast({
+        title: "An error occurred. Please try again",
+        status: "error",
+        duration: 1000,
+        isClosable: true,
+        position: "bottom"
+      });
     }
-}
+};
 
   return (
     <div>
