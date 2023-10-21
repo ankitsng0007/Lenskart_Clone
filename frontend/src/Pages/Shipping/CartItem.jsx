@@ -134,6 +134,25 @@ const CartItem = () => {
               .00
             </Text>
           </Flex>
+
+          <Divider h={2} mb={2} />
+          <Flex justifyContent={"space-between"} fontSize="16px" mb={2}>
+            <Text fontWeight="bold">COUPON</Text>
+            <Text fontWeight="medium"> - ₹{coupon || 0}.00</Text>
+          </Flex>
+
+          <Divider border="1px solid" mb={2} />
+          <Flex justifyContent={"space-between"}>
+            <Text fontWeight="bolder" fontSize="17px">
+              TOTAL PAYABLE
+            </Text>
+            <Text fontWeight="bold" fontSize="17px" color="#329BA9">
+              ₹
+              {Math.round(getTotalPrice() + getTotalPrice() * 0.18) -
+                (coupon || 0)}
+              .00
+            </Text>
+          </Flex>
         </Box>
       </Flex>
     </>
