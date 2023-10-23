@@ -20,7 +20,7 @@ const AlRoutes = () => {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/products' element={<Product />}></Route>
-        <Route path="/product" element={<SingleProduct />} />
+        <Route path="/products/:id" element={<SingleProduct />} />
 
         <Route path='/cart' element={<CartPage />}></Route>
 

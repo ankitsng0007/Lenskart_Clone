@@ -1,5 +1,6 @@
-import { Avatar, Box, Button, Flex, Grid, Heading, Image, Link, Menu, MenuButton, MenuList, Text } from '@chakra-ui/react';
+import { Avatar, Box, Button, Flex, Grid, Heading, Image, Menu, MenuButton, MenuList, Text } from '@chakra-ui/react';
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const NavbarCard5 = () => {
   return (

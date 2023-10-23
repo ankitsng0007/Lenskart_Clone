@@ -1,6 +1,8 @@
-import { Box, Flex, Grid, GridItem, Image, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 import {AiFillStar } from "react-icons/ai";
+import {Link} from "react-router-dom";
+
 
 const ProductCard = ({ type }) => {
   return (
@@ -17,7 +19,7 @@ const ProductCard = ({ type }) => {
     >
        {type.map((ele) => (
         <GridItem>
-            <Link to={`/products/${ele.id}`}>
+            <Link to={`/products/${ele._id}`}>
             <Box
               position="relative"
               border="1px solid"

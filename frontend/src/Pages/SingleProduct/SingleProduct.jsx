@@ -15,7 +15,7 @@ const SingleProduct = () => {
     const [data, setData] = useState({});
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {cart} = useSelector((state) => state.cartReducer)
+    const {cart} = useSelector((state) => state.CartReducer)
     
     const handleAddToCart = () => {
         const existingItem = cart.findIndex((item) => item._id === data._id);
