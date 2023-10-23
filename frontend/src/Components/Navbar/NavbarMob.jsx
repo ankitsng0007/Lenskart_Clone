@@ -315,6 +315,93 @@ const NavbarMob = () => {
                     </Box>
                   </Link>
                 </Box>
+                <Heading mt="15%" color="black" mb="5%" fontSize="15px">
+                  HIGHLIGHTS
+                </Heading>
+                <Box display="flex" flexDirection="column" fontSize="16px">
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Check Frame Size
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Gold Membership
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Try Frames in 3D
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      borderBottom="1px solid white"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Dowloads Apps
+                    </Box>
+                  </Link>
+                </Box>
+                <Heading mt="15%" color="black" fontSize="15px" mb="5%">
+                  FAQ's & POLICIES
+                </Heading>
+                <Box display="flex" flexDirection="column" fontSize="16px">
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Frequently Asked Questions
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Cancellation & Return Policy
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Cobrowsing
+                    </Box>
+                  </Link>
+                </Box>
+
                 </DrawerBody>
             </DrawerContent>
           </Drawer>
