@@ -1,8 +1,9 @@
-import { Box, Grid, Heading, Image, Link, Stack, Text } from '@chakra-ui/react';
+import { Box, Grid, Heading, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const OrderHistory = () => {
     const orders = useSelector((store) => store.orderManager.order);

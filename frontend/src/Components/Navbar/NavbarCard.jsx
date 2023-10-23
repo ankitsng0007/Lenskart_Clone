@@ -64,7 +64,7 @@ export const NavbarCard2 = () => {
                          bg="whiteAlpha.200"
                          fontSize="14px"
                          fontWeight="400"
-                         onClick={() => navigate("/")}
+                         onClick={() => navigate("/orderhistory")}
                         >
                             Track Order
                         </Button>
@@ -122,11 +122,11 @@ export const NavbarCard2 = () => {
                           bg="whiteAlpha.900"
                           fontSize="14px"
                           fontWeight="400"
-                          onClick={() => navigate("/")}
+                          onClick={() => navigate("/wishlist")}
                         >
                             WishList
                         </Button>
-                        <Link to="/">
+                        <Link to="/cart">
                         <Button
                           leftIcon={<CgShoppingCart />}
                           size="lg"

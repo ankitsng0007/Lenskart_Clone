@@ -13,6 +13,7 @@ import CartItem from '../Pages/Shipping/CartItem';
 import Shipping from '../Pages/Shipping/Shipping';
 import Productpost from '../Pages/Admin/Productpost';
 import Productlist from '../Pages/Admin/Productlist';
+import EditProduct from '../Pages/Admin/EditProduct';
 const AlRoutes = () => {
   return (
     <div>
@@ -39,6 +40,7 @@ const AlRoutes = () => {
 
         <Route path='/productpost' element={<Productpost />}></Route>
         <Route path='/productlist' element={<Productlist />}></Route>
+        <Route path='/editproduct' element={<EditProduct />} ></Route>
       </Routes>
     </div>
   );

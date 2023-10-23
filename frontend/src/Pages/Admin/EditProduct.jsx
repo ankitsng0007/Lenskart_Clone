@@ -1,4 +1,4 @@
-import { Box, Center, Heading, VStack, useToast } from '@chakra-ui/react';
+import { Box, Button, Center, FormControl, FormLabel, Heading, Input, Select, VStack, useToast } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -137,6 +137,215 @@ const EditProduct = () => {
               bg="whiteAlpha.900"
             >
                 <Heading>Edit Product</Heading>
+                <br/>
+                <br/>
+
+                <FormControl>
+                    <FormLabel fontSize="16px" h="25px">
+                        Product Name
+                    </FormLabel>
+                    <Input
+                       type="text"
+                       size="lg"
+                       fontSize="16px"
+                       h="40px"
+                       placeholder="Name"
+                       onChange={(e) => setProductRefLink(e.target.value)}
+                       value={productRefLink}
+                       bg="whiteAlpha.900"
+            />
+                </FormControl>
+                <br />
+                <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Image Url
+            </FormLabel>
+            <Input
+              type="text"
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              placeholder="Enter Image Url"
+              onChange={(e) => setImageTsrc(e.target.value)}
+              value={imageTsrc}
+              bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Discounted Price
+            </FormLabel>
+            <Input
+              type="Number"
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              placeholder="Enter Discounted Price"
+              onChange={(e) => setPrice(e.target.value)}
+              value={price}
+              bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Original Price
+            </FormLabel>
+            <Input
+              type="Number"
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              placeholder="Enter Original Price"
+              onChange={(e) => setMPrice(e.target.value)}
+              value={mPrice}
+              bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Frame Shape
+            </FormLabel>
+            <Select
+              placeholder="Choose Frame Shape"
+              onChange={(e) => setShape(e.target.value)}
+              value={shape}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+              <option value="Rectangle">Rectangle</option>
+              <option value="Round">Round</option>
+              <option value="Wayfarer">Wayfarer</option>
+              <option value="Butterfly">Butterfly</option>
+              <option value="Aviator">Aviator</option>
+              <option value="Wrapround">Wrap Round</option>
+              <option value="Cateye">Cateye</option>
+              <option value="Hexagon">Hexagon</option>
+              <option value="Square">Square</option>
+            </Select>
+          </FormControl>
+          <br />
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Choose Gender
+            </FormLabel>
+            <Select
+              placeholder="Choose Gender"
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+              <option value="Men">Men</option>
+              <option value="Women">Women</option>
+              <option value="Kid">Kid</option>
+            </Select>
+          </FormControl>
+          <br />
+
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Frame Types
+            </FormLabel>
+            <Select
+              placeholder="Choose Frame Types"
+              onChange={(e) => setStyle(e.target.value)}
+              value={style}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+              <option value="Tinted">Tinted</option>
+              <option value="FullFrame">FullFrame</option>
+              <option value="Mirror">Mirror</option>
+            </Select>
+          </FormControl>
+          <br />
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Frame Dimension
+            </FormLabel>
+            <Input
+              type="text"
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              placeholder="Enter Frame Dimension"
+              onChange={(e) => setDimension(e.target.value)}
+              value={dimension}
+              bg="whiteAlpha.900"
+            />
+          </FormControl>
+
+          <br />
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Choose Glass
+            </FormLabel>
+            <Select
+              placeholder="Choose Glass"
+              value={productType}
+              onChange={(e) => setProductType(e.target.value)}
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              bg="whiteAlpha.900"
+            >
+              <option value="sunglasses">Sun Glass</option>
+              <option value="eyeglasses">Eye Glass</option>
+            </Select>
+          </FormControl>
+          <br />
+          <FormControl>
+            <FormLabel fontSize="16px" h="25px">
+              Frame Colour
+            </FormLabel>
+            <Input
+              type="text"
+              size="lg"
+              fontSize="16px"
+              h="40px"
+              placeholder="Enter Frame Colour"
+              onChange={(e) => setColors(e.target.value)}
+              value={colors}
+              bg="whiteAlpha.900"
+            />
+          </FormControl>
+          <br />
+          <br />
+
+          {loading ? (
+            <Button
+            isLoading
+            loadingText="Submitting"
+            colorScheme="blue"
+            fontSize="20px"
+            py="4"
+            w="100%"
+            borderRadius="lg"
+            variant="outline"
+            >
+                Submit
+            </Button>
+         ) : (
+            <Button
+              colorScheme="blue"
+              fontSize="20px"
+              py="4"
+              w="100%"
+              borderRadius="lg"
+              onClick={handleEdit}
+            >
+              Submit
+            </Button>
+         )}
+         <br/>
             </VStack>
         </Center>
     </Box>

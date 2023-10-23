@@ -38,7 +38,7 @@ const SingleProduct = () => {
     };
 
     const fetchSingleProduct = () => {
-        axios(`http://localhost:8080/product/${id}`)
+        axios(`https://harlequin-fawn-tutu.cyclic.app/product/${id}`)
         .then((res) => setData(res.data.product))
         .catch((err) => console.log(err));
     };

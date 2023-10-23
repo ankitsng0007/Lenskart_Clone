@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../Components/Navbar/Navbar';
 import Footer from '../../Components/Footer/Footer';
+import {cartItem} from "./CartItem";
+
 
 const Shipping = () => {
     const navigate = useNavigate();
@@ -402,7 +404,8 @@ const Shipping = () => {
             </Box>
         </GridItem>
         <GridItem w={{ xl: "90%", lg: "80%", md: "80%", base: "80%" }} m="auto">
-    
+        
+        
         </GridItem>
       </Grid>
       <br />
