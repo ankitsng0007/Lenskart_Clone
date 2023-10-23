@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import {Accordion, AccordionButton, AccordionIcon, AccordionItem, Avatar, Box, Button, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, HStack, Heading, Image, Input, Text, useDisclosure} from "@chakra-ui/react";
+import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Avatar, Box, Button, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, HStack, Heading, Image, Input, Text, useDisclosure} from "@chakra-ui/react";
 import {AuthContext} from "../../ContextApi/AuthContext";
 import {Link, useNavigate} from "react-router-dom";
 import {HamburgerIcon} from "@chakra-ui/icons";
@@ -213,6 +213,41 @@ const NavbarMob = () => {
                           <AccordionIcon />
                             </AccordionButton>
                         </h2>
+                        <AccordionPanel pb={4}>
+                        <Link to="/products">
+                          <Box>
+                            <Text pb="2">EYEGLASSES</Text>
+                            <Text pb="2">COMPUTER GLASSES</Text>
+                            <Text pb="2">CONTACT LENSES</Text>
+                            <Text pb="2">SUN GLASSES</Text>
+                          </Box>
+                        </Link>
+                      </AccordionPanel>
+                    </AccordionItem>
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box
+                            as="span"
+                            flex="1"
+                            textAlign="left"
+                            fontWeight="500"
+                          >
+                            Women
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={5}>
+                        <Link to="/products">
+                          <Box>
+                            <Text pb="2">EYEGLASSES</Text>
+                            <Text pb="2">COMPUTER GLASSES</Text>
+                            <Text pb="2">CONTACT LENSES</Text>
+                            <Text pb="2">SUN GLASSES</Text>
+                          </Box>
+                        </Link>
+                      </AccordionPanel>
                     </AccordionItem>
                     </Accordion>
                 </Box>
