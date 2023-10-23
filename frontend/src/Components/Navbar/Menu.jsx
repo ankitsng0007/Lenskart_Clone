@@ -1,5 +1,8 @@
-import { Box, HStack, Image, Img, Input, Link, MenuButton, MenuList, Text, useDisclosure } from '@chakra-ui/react';
+import { Box, HStack, Image, Img, Input, Link, MenuButton, MenuList, Spacer, Text, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
+import {NavbarDetail2} from "./NavbarDetail";
+import Login from "../../Pages/Login/Login";
+import Signup from "../../Pages/SignUp/Signup";
 
 const Menu = () => {
     const {isOpen, onOpen, onClose } = useDisclosure();
@@ -74,7 +77,20 @@ const Menu = () => {
                                 Cart
                             </Text>
                         </Link>
-                        
+                        {NavbarDetail2.map((i, index) => (
+                            <Box key={index}>
+                                <Link to="./products">
+                                <Text
+                                  fontSize="16px"
+                                  fontWeight="500"
+                                  _hover={{ textDecoration: "underline" }}
+                                >
+                                    {i.labels}
+                                </Text>
+                                </Link>
+                                <Spacer />
+                                </Box>
+                        ))}
                     </Box>
                 </MenuList>
             </Menu>
