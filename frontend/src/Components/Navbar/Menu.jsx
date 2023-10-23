@@ -1,4 +1,4 @@
-import { Box, HStack, Image, Img, Input, MenuButton, useDisclosure } from '@chakra-ui/react';
+import { Box, HStack, Image, Img, Input, Link, MenuButton, MenuList, Text, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 
 const Menu = () => {
@@ -32,8 +32,51 @@ const Menu = () => {
                   p={2}
                   mr={6}
                 >
-                    <Img/>
+                    <Img
+                      w={10}
+                      src="https://www.clipartmax.com/png/full/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png"
+                    />
                 </MenuButton>
+                <MenuList
+                  p={4}
+                  border="none"
+                  onMouseEnter={onOpen}
+                  onMouseLeave={onClose}
+                  bg="#fbf9f7"
+                >
+                    <Box textAlign={"left"} lineHeight="2">
+                        <Login />
+                        <Signup />
+                        <Link>
+                            <Text
+                              fontSize="16px"
+                              fontWeight="500"
+                              _hover={{ textDecoration: "underline" }}
+                            >
+                                Track Order
+                            </Text>
+                        </Link>
+                        <Link>
+                          <Text
+                            fontSize="16px"
+                            fontWeight="500"
+                            _hover={{ textDecoration: "underline" }}
+                          >
+                            Wishlist
+                          </Text>
+                        </Link>
+                        <Link to="./cart">
+                            <Text
+                              fontSize="16px"
+                              fontWeight="500"
+                              _hover={{ textDecoration: "underline" }}
+                            >
+                                Cart
+                            </Text>
+                        </Link>
+                        
+                    </Box>
+                </MenuList>
             </Menu>
         </HStack>
     </Box>
