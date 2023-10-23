@@ -9,7 +9,7 @@ import Footer, {} from "../../Components/Footer/Footer";
 
 const Orders = () => {
     const navigate = useNavigate();
-    const { cart, coupon } = useSelector((state) => state.cartReducer );
+    const { cart, coupon } = useSelector((state) => state.CartReducer );
     const dispatch = useDispatch();
 
     const getTotalPrice = () => {

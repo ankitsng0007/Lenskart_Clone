@@ -6,7 +6,7 @@ import { Box, Button, Flex, Grid, Heading, Image, Text } from '@chakra-ui/react'
 
 const CartItem = () => {
     const dispatch = useDispatch();
-    const { cart } = useSelector((state) => state.cartReducer);
+    const { cart } = useSelector((state) => state.CartReducer);
 
     const handleDelete = (item) => {
         dispatch(removeFromCart(item));
