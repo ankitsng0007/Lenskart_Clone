@@ -1,3 +1,4 @@
+import { Flex } from '@chakra-ui/react';
 import React from 'react';
 
 const Pagination = () => {
@@ -29,9 +30,11 @@ const Pagination = () => {
     </button>
    )
   return (
-    <div>
-      
-    </div>
+    <Flex>
+      {prev}
+      {currentPage}
+      {next}
+    </Flex>
   );
 }
 
