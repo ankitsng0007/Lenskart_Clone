@@ -249,7 +249,71 @@ const NavbarMob = () => {
                         </Link>
                       </AccordionPanel>
                     </AccordionItem>
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box
+                            as="span"
+                            flex="1"
+                            textAlign="left"
+                            fontWeight="500"
+                          >
+                            Kids
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4}>
+                        <Link to="/products">
+                          <Box>
+                            <Text pb="2">EYEGLASSES</Text>
+                            <Text pb="2">COMPUTER GLASSES</Text>
+                            <Text pb="2">CONTACT LENSES</Text>
+                            <Text pb="2">SUN GLASSES</Text>
+                          </Box>
+                        </Link>
+                      </AccordionPanel>
+                    </AccordionItem>
                     </Accordion>
+                </Box>
+
+                <Heading mt="15%" color="black" fontSize="15px" mb="5%">
+                  Our Services
+                </Heading>
+                <Box display="flex" flexDirection="column" fontSize="16px">
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      fontSize="15px"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                    >
+                      Free Home Trail
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Home Eye check-up
+                    </Box>
+                  </Link>
+                  <Link>
+                    <Box
+                      borderBottom="0.1px solid gray"
+                      p="5% 0%"
+                      color="black"
+                      _hover={{ fontWeight: "bold" }}
+                      fontSize="15px"
+                    >
+                      Store Locator
+                    </Box>
+                  </Link>
                 </Box>
                 </DrawerBody>
             </DrawerContent>
