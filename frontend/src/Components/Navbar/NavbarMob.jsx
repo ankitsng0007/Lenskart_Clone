@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Avatar, Box, Button, Drawer, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, HStack, Heading, Image, Input, Text, useDisclosure} from "@chakra-ui/react";
+import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Avatar, Box, Button, Drawer, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, HStack, Heading, Image, Input, Text, useDisclosure} from "@chakra-ui/react";
 import {AuthContext} from "../../ContextApi/AuthContext";
 import {Link, useNavigate} from "react-router-dom";
 import {HamburgerIcon} from "@chakra-ui/icons";
@@ -401,8 +401,27 @@ const NavbarMob = () => {
                     </Box>
                   </Link>
                 </Box>
-
+               <Accordion allowMultiple></Accordion>
                 </DrawerBody>
+
+                {isAuth && (
+                <DrawerFooter bg="whiteAlpha.900">
+                  <Button
+                    mt="5%"
+                    fontSize="18px"
+                    colorScheme="blue"
+                    borderBottom="1px solid #526171"
+                    p="6% 15%"
+                    _hover={{ bg: "blue.200" }}
+                    onClick={() => {
+                      setisAuth(false);
+                      return <Navigate to="/" />;
+                    }}
+                  >
+                    Sign Out
+                  </Button>
+                </DrawerFooter>
+              )}
             </DrawerContent>
           </Drawer>
         </Box>
