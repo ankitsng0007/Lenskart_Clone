@@ -8,6 +8,7 @@ import {TbArrowsUpDown} from "react-icons/tb";
 import Footer from '../../Components/Footer/Footer';
 import Loading from './Loading';
 import ProductCard from './ProductCard';
+import Pagination from '../../Components/Pagination';
 
 
 
@@ -166,6 +167,7 @@ const Product = () => {
                 )}
             </Box>
         </Flex>
+        <Pagination current = {page} onChange={(value) => setPage(value)} />
     </Box>
     <Footer />
     </>

@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react';
 import React from 'react';
 
-const Pagination = () => {
+const Pagination = ({current, onChange}) => {
    const style = {
     background: "gray",
     color: "white",
