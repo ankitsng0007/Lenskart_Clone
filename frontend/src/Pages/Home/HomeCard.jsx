@@ -1,5 +1,6 @@
 import { Box, Center, Grid, Image, Text } from '@chakra-ui/react';
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const HomeCard = ( {type} ) => {
   return (
@@ -27,6 +28,7 @@ const HomeCard = ( {type} ) => {
                 p="1"
                 pb="2.5"
                 >
+            <Link to="/products">
             <Center>
                 <Image src={`${i.img}`} alt={i.name} w="100%"/>
             </Center>
@@ -35,6 +37,7 @@ const HomeCard = ( {type} ) => {
                     {i.title}
                 </Text>
             </Center>
+            </Link>
             </Box>
             ))
 }
