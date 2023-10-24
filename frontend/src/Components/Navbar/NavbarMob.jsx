@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Avatar, Box, Button, Drawer, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, HStack, Heading, Image, Input, Text, useDisclosure} from "@chakra-ui/react";
+import {Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Avatar, Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, HStack, Heading, Image, Input, Text, useDisclosure} from "@chakra-ui/react";
 import {AuthContext} from "../../ContextApi/AuthContext";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, Navigate, useNavigate} from "react-router-dom";
 import {HamburgerIcon} from "@chakra-ui/icons";
 import Login from "../../Pages/Login/Login";
 import Signup from '../../Pages/SignUp/Signup';
