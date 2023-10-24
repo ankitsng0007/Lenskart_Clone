@@ -85,7 +85,7 @@ const Signup = () => {
     const getData = (body) => {
         setLoading(true);
 
-        fetch(`http://localhost:8080/users`)
+        fetch(`https://harlequin-fawn-tutu.cyclic.app/user`)
         .then((res)=> res.json())
         .then((res) => {
             res.map((el) => {
@@ -99,7 +99,7 @@ const Signup = () => {
         })
         .then(() => {
             if (flag === false){
-                fetch(`http://localhost:8080/users/register`,{
+                fetch(`https://harlequin-fawn-tutu.cyclic.app/user/register`,{
                     method: "POST",
                     body: JSON.stringify(body),
                     headers: {
